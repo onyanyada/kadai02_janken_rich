@@ -1,7 +1,32 @@
-// alert(11111);
 // ハードモードボタン
 $('#hardBtn').click(function () {
     $('.hardtxt').text("ハードモード適用");
+});
+
+
+$("#sss").click(function () {
+    const fruits = ["u", "b", "c", "d", "e"];
+    for (let i = 0; i < fruits.length; i++) {
+        // console.log(fruits.length);//OK
+
+        // ランダムな数字を定数ranに入れる(配列の数の範囲で)
+        const ran = Math.floor(Math.random() * fruits.length);//0~4
+        console.log(ran);//NG、同じ数が何回も出てしまう
+        // すべての数字を一つずつランダムな順序で出力したい
+        // https://www.youtube.com/watch?v=V5KCKbBo000&list=LL&index=38と同じことをしているのに
+        // const v = fruits.splice(r,1); を使うと削除されループが3回で終わってしまう
+
+        // 配列の中からran番目の文字列を定数vに入れる
+        const v = fruits[ran];
+        console.log(v);//OK
+
+        // const className = document.getElementsByClassName("scenario");
+        // console.log(className);
+        // if (v == className) {
+        //     //classNameのdivをshow();させたい
+        //     $(`.{className}`).show();
+        // }
+    }
 });
 
 
