@@ -1,4 +1,23 @@
 // alert(11111);
+// ストーリー開始ボタン
+$(".btn").click(function () {
+    const a = [0, 1]
+    const r = Math.floor(Math.random() * a.length);
+    if (r == 0) {
+        $('#janken1').show();
+        $(".nextStory").click(function () {
+            $('#janken1').hide();
+            $('#janken2').show();
+        });
+    }
+    if (r == 1) {
+        $('#janken2').show();
+        $(".nextStory").click(function () {
+            $('#janken2').hide();
+            $('#janken1').show();
+        });
+    }
+});
 
 
 // じゃんけん1ここから  
