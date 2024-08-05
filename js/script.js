@@ -11,14 +11,15 @@ $("#sss").click(function () {
 
         // ランダムな数字を定数ranに入れる(配列の数の範囲で)
         const ran = Math.floor(Math.random() * fruits.length);//0~4
-        console.log(ran);//NG、同じ数が何回も出てしまう
+        console.log(ran);//NG、同じ数が何回も出てしまう。この時点では5回ループ。
         // すべての数字を一つずつランダムな順序で出力したい
         // https://www.youtube.com/watch?v=V5KCKbBo000&list=LL&index=38と同じことをしているのに
-        // const v = fruits.splice(r,1); を使うと削除されループが3回で終わってしまう
+        const v = fruits.splice(ran, 1);
+        // を使うと削除されループが3回で終わってしまう上に、同じ数が何回も出てしまう
 
         // 配列の中からran番目の文字列を定数vに入れる
-        const v = fruits[ran];
-        console.log(v);//OK
+        // const v = fruits[ran];
+        console.log(v);
 
         // const className = document.getElementsByClassName("scenario");
         // console.log(className);
