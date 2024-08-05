@@ -69,6 +69,8 @@ $(".gu_btn1").on("click", function () {
 
     //3.表示処理
     jankenView1();
+    // エンディング
+    end();
 
 });
 
@@ -99,6 +101,8 @@ $(".cho_btn1").on("click", function () {
 
     //3.表示処理
     jankenView1();
+    // エンディング
+    end();
 
 });
 
@@ -126,6 +130,8 @@ $(".par_btn1").on("click", function () {
 
     //3.表示処理
     jankenView1();
+    // エンディング
+    end();
 });
 
 //3.表示処理
@@ -170,6 +176,8 @@ $(".gu_btn2").on("click", function () {
 
     //3.表示処理
     jankenView2();
+    // エンディング
+    end();
 
 });
 
@@ -200,6 +208,8 @@ $(".cho_btn2").on("click", function () {
 
     //3.表示処理
     jankenView2();
+    // エンディング
+    end();
 
 });
 
@@ -227,6 +237,9 @@ $(".par_btn2").on("click", function () {
 
     //3.表示処理
     jankenView2();
+
+    // エンディング
+    end();
 });
 
 //3.表示処理
@@ -240,11 +253,12 @@ const jankenView2 = () => {
 //じゃんけん2ここまで
 
 // エンディング
-const endtxt = '';
-if (total >= 1) {
-    $(".endtxt").text("ハッピーエンド");
-} else if (total == 0) {
-    $(".endtxt").text("修道院");
-} else if (total < 0) {
-    $(".endtxt").text("処刑");
+const end = () => {
+    if (total >= 1) {
+        $(".endtxt").text("ハッピーエンド");
+    } else if (total == 0) {
+        $(".endtxt").text("修道院");
+    } else if (total < 0) {
+        $(".endtxt").text("処刑");
+    }
 }
