@@ -8,6 +8,11 @@ $(".btn").click(function () {
         $(".nextStory").click(function () {
             $('#janken1').hide();
             $('#janken2').show();
+            $(".nextStory").click(function () {
+                $('#janken2').hide();
+                $('#end').show();
+
+            });
         });
     }
     if (r == 1) {
@@ -15,6 +20,12 @@ $(".btn").click(function () {
         $(".nextStory").click(function () {
             $('#janken2').hide();
             $('#janken1').show();
+            $(".nextStory").click(function () {
+                $('#janken1').hide();
+                $('#end').show();
+
+            });
+
         });
     }
 });
@@ -53,7 +64,7 @@ $(".gu_btn1").on("click", function () {
     }
 
 
-    total = score1;
+    total = score1 + score2;
 
 
     //3.表示処理
@@ -83,7 +94,7 @@ $(".cho_btn1").on("click", function () {
 
     }
 
-    total = score1;
+    total = score1 + score2;
 
 
     //3.表示処理
@@ -110,7 +121,7 @@ $(".par_btn1").on("click", function () {
         judge = 'あいこ';
         score1 = 0;
     }
-    total = score1;
+    total = score1 + score2;
 
 
     //3.表示処理
@@ -232,7 +243,7 @@ const jankenView2 = () => {
 const endtxt = '';
 if (total >= 1) {
     $(".endtxt").text("ハッピーエンド");
-} else if (total === 0) {
+} else if (total == 0) {
     $(".endtxt").text("修道院");
 } else if (total < 0) {
     $(".endtxt").text("処刑");
