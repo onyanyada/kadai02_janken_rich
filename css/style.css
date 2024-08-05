@@ -1,5 +1,6 @@
 #janken1,
 #janken2,
-#end {
+#end,
+.nextStory {
     display: none;
 }

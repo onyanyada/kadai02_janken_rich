@@ -1,29 +1,37 @@
 // alert(11111);
+// ハードモードボタン
+$('#hardBtn').click(function () {
+    $('.hardtxt').text("ハードモード適用");
+});
+
+
 // ストーリー開始ボタン
-$(".btn").click(function () {
+$("#btn").click(function () {
     const a = [0, 1]
     const r = Math.floor(Math.random() * a.length);
     if (r == 0) {
         $('#janken1').show();
+        $(".nextStory").show();
         $(".nextStory").click(function () {
             $('#janken1').hide();
             $('#janken2').show();
             $(".nextStory").click(function () {
                 $('#janken2').hide();
                 $('#end').show();
-
+                $(".nextStory").hide();
             });
         });
     }
     if (r == 1) {
         $('#janken2').show();
+        $(".nextStory").show();
         $(".nextStory").click(function () {
             $('#janken2').hide();
             $('#janken1').show();
             $(".nextStory").click(function () {
                 $('#janken1').hide();
                 $('#end').show();
-
+                $(".nextStory").hide();
             });
 
         });
@@ -38,6 +46,18 @@ let hand = "";//変数用意
 let judge = ""; //変数用意
 let score1 = 0; //変数用意
 let score2 = 0; //変数用意
+
+// トータル計算
+let totalfunc = () => {
+    total = score1 + score2;
+}
+
+// ハードモード
+$('#hardBtn').click(function () {
+    totalfunc = () => {
+        total = score1 + score2 - 2;
+    }
+});
 
 
 // グーを選んだ時
@@ -63,9 +83,7 @@ $(".gu_btn1").on("click", function () {
         score1 = -1;
     }
 
-
-    total = score1 + score2;
-
+    totalfunc();
 
     //3.表示処理
     jankenView1();
@@ -96,7 +114,9 @@ $(".cho_btn1").on("click", function () {
 
     }
 
-    total = score1 + score2;
+    // total = score1 + score2;
+    totalfunc();
+
 
 
     //3.表示処理
@@ -125,7 +145,8 @@ $(".par_btn1").on("click", function () {
         judge = 'あいこ';
         score1 = 0;
     }
-    total = score1 + score2;
+    // total = score1 + score2;
+    totalfunc();
 
 
     //3.表示処理
@@ -141,7 +162,6 @@ const jankenView1 = () => {
     $(".score1").html(score1);
     $(".total1").text(total);
 }
-
 //じゃんけん1ここまで
 
 
@@ -171,7 +191,8 @@ $(".gu_btn2").on("click", function () {
     }
 
 
-    total = score1 + score2;
+    // total = score1 + score2;
+    totalfunc();
 
 
     //3.表示処理
@@ -203,7 +224,8 @@ $(".cho_btn2").on("click", function () {
 
     }
 
-    total = score1 + score2;
+    // total = score1 + score2;
+    totalfunc();
 
 
     //3.表示処理
@@ -232,7 +254,8 @@ $(".par_btn2").on("click", function () {
         judge = 'あいこ';
         score2 = 0;
     }
-    total = score1 + score2;
+    // total = score1 + score2;
+    totalfunc();
 
 
     //3.表示処理
