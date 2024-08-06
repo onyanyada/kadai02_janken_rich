@@ -5,7 +5,7 @@ $('#hardBtn').click(function () {
 
 // シナリオ並び替え
 $("#btn").click(function () {
-    $('.nextStory').show();
+    $('.endBtn').show();
     const scenarios = ["s1", "s2", "s3", "s4", "s5"];
     const n = scenarios.length;//ループ5回実行確定させる
     for (let i = 0; i < n; i++) {
@@ -158,6 +158,7 @@ const jankenView1 = () => {
     $(".judgment").html(judge);
     $(".score1").html(score1);
     $(".total1").text(total);
+    localStorage.setItem("total", total); // totalの値を保存
 }
 //じゃんけん1ここまで
 
@@ -268,17 +269,19 @@ const jankenView2 = () => {
     $(".judgment").html(judge);
     $(".score2").html(score2);
     $(".total2").text(total);
+    localStorage.setItem("total", total); // totalの値を保存
 }
 
 //じゃんけん2ここまで
 
 // エンディング
-const end = () => {
-    if (total >= 1) {
-        $(".endtxt").text("ハッピーエンド");
-    } else if (total == 0) {
-        $(".endtxt").text("修道院");
-    } else if (total < 0) {
-        $(".endtxt").text("処刑");
-    }
+const totalw = localStorage.getItem("total");
+$(".total2").text(totalw);
+console.log(totalw);
+if (totalw >= 1) {
+    $(".endtxt").text("ハッピーエンド");
+} else if (totalw == 0) {
+    $(".endtxt").text("修道院");
+} else if (totalw < 0) {
+    $(".endtxt").text("処刑");
 }
