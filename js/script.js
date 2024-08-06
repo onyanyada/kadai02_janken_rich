@@ -131,6 +131,9 @@ const resultView1 = () => {
 
 
 // ----------------s2ここから
+if (gachaNumber == -1) {
+    $('.gacha_option_btn').css('display', 'block');
+}
 
 // グーを選んだ時
 $(".gu_btn2").on("click", function () {
@@ -165,6 +168,18 @@ $(".par_btn2").on("click", function () {
     score2 = 1;
     totalfunc();
 
+
+    //3.表示処理
+    resultView2();
+
+});
+
+$('.gacha_option_btn').on("click", function () {
+    response = '王妃「やるわね」';
+    judge = '好感';
+    score2 = 2;
+
+    totalfunc();
 
     //3.表示処理
     resultView2();
