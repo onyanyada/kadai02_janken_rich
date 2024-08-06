@@ -116,8 +116,8 @@ $(".par_btn1").on("click", function () {
 
 //3.表示処理
 const resultView1 = () => {
-    $(".pc_hands").html(response);
-    $(".judgment").html(judge);
+    $(".pc_hands1").html(response);
+    $(".judgment1").html(judge);
     $(".score1").html(score1);
     $(".total1").text(total);
     localStorage.setItem("total", total); // totalの値を保存
@@ -168,8 +168,8 @@ $(".par_btn2").on("click", function () {
 
 //3.表示処理
 const resultView2 = () => {
-    $(".pc_hands").html(response);
-    $(".judgment").html(judge);
+    $(".pc_hands2").html(response);
+    $(".judgment2").html(judge);
     $(".score2").html(score2);
     $(".total2").text(total);
     localStorage.setItem("total", total); // totalの値を保存
@@ -218,8 +218,8 @@ $(".par_btn3").on("click", function () {
 
 //3.表示処理
 const resultView3 = () => {
-    $(".pc_hands").html(response);
-    $(".judgment").html(judge);
+    $(".pc_hands3").html(response);
+    $(".judgment3").html(judge);
     $(".score3").html(score3);
     $(".total3").text(total);
     localStorage.setItem("total", total); // totalの値を保存
@@ -269,8 +269,8 @@ $(".par_btn4").on("click", function () {
 
 //3.表示処理
 const resultView4 = () => {
-    $(".pc_hands").html(response);
-    $(".judgment").html(judge);
+    $(".pc_hands4").html(response);
+    $(".judgment4").html(judge);
     $(".score4").html(score3);
     $(".total4").text(total);
     localStorage.setItem("total", total); // totalの値を保存
@@ -303,8 +303,6 @@ $(".gu_btn5").on("click", function () {
         score5 = -1;
     }
 
-
-    // total = score1 + score2;
     totalfunc();
 
 
@@ -336,7 +334,6 @@ $(".cho_btn5").on("click", function () {
 
     }
 
-    // total = score1 + score2;
     totalfunc();
 
 
@@ -376,8 +373,8 @@ $(".par_btn5").on("click", function () {
 
 //3.表示処理
 const resultView5 = () => {
-    $(".pc_hands").html(response);
-    $(".judgment").html(judge);
+    $(".pc_hands5").html(response);
+    $(".judgment5").html(judge);
     $(".score5").html(score5);
     $(".total5").text(total);
     localStorage.setItem("total", total); // totalの値を保存
