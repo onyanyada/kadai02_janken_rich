@@ -10,7 +10,7 @@ $(".gu_btn6").on("click", function () {
     if (r == 1) {
         imgItem = '<img src="./img/key.png" width="100px">';
         getItem = '鍵';
-        gachaScore = 0;
+        gachaScore = -1;
     }
     if (r == 2) {
         imgItem = '<img src="./img/cha.png" width="100px">';
@@ -20,7 +20,7 @@ $(".gu_btn6").on("click", function () {
     if (r == 3) {
         imgItem = '<img src="./img/maho.png" width="100px">';
         getItem = '魔法を使える猫';
-        gachaScore = -1;
+        gachaScore = 2;
     }
 
 
@@ -44,12 +44,12 @@ $(".cho_btn6").on("click", function () {
     if (r == 2) {
         imgItem = '<img src="./img/cha.png" width="100px">';
         getItem = '異国の茶葉';
-        gachaScore = 0;
+        gachaScore = 1;
     }
     if (r == 3) {
         imgItem = '<img src="./img/maho.png" width="100px">';
         getItem = '魔法を使える猫';
-        gachaScore = 1;
+        gachaScore = 2;
 
     }
 
@@ -68,17 +68,17 @@ $(".par_btn6").on("click", function () {
     if (r == 1) {
         imgItem = '<img src="./img/key.png" width="100px">';
         getItem = '鍵';
-        gachaScore = 1;
+        gachaScore = -1;
     }
     if (r == 2) {
         imgItem = '<img src="./img/cha.png" width="100px">';
         getItem = '異国の茶葉';
-        gachaScore = -1;
+        gachaScore = 1;
     }
     if (r == 3) {
         imgItem = '<img src="./img/maho.png" width="100px">';
         getItem = '魔法を使える猫';
-        gachaScore = 0;
+        gachaScore = 2;
     }
 
 
