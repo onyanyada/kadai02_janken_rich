@@ -61,10 +61,14 @@ let score3 = 0; //変数用意
 let score4 = 0; //変数用意
 let score5 = 0; //変数用意
 
+// ガチャで取得したアイテムのスコア反映
+const gachaReflect = localStorage.getItem("gachaScore");
+// スコアを数字にする
+const gachaNumber = parseInt(gachaReflect);
 
 // トータル計算
 let totalfunc = () => {
-    total = score1 + score2 + score3 + score4 + score5;
+    total = score1 + score2 + score3 + score4 + score5 + gachaNumber;
 }
 
 // ハードモード
@@ -127,6 +131,7 @@ const resultView1 = () => {
 
 
 // ----------------s2ここから
+
 // グーを選んだ時
 $(".gu_btn2").on("click", function () {
     response = '聖女に逃げられた';
