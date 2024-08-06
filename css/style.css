@@ -1,15 +1,13 @@
-#janken1,
-#janken2,
 #end,
 .nextStory {
     display: none;
 }
 
-.u,
-.b,
-.c,
-.d,
-.e {
+.s1,
+.s2,
+.s3,
+.s4,
+.s5 {
     display: none;
 }
 

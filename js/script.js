@@ -3,19 +3,19 @@ $('#hardBtn').click(function () {
     $('.hardtxt').text("ハードモード適用");
 });
 
-
-$("#sss").click(function () {
-    const fruits = ["u", "b", "c", "d", "e"];
-    const n = fruits.length;//ループ5回実行確定させる
+// シナリオ並び替え
+$("#btn").click(function () {
+    $('.nextStory').show();
+    const scenarios = ["s1", "s2", "s3", "s4", "s5"];
+    const n = scenarios.length;//ループ5回実行確定させる
     for (let i = 0; i < n; i++) {
         // ランダムな数字を定数ranに入れる(配列の数の範囲で)
-        const ran = Math.floor(Math.random() * fruits.length);//0~4
+        const ran = Math.floor(Math.random() * scenarios.length);//0~4
         // console.log(ran); //spliceで重複が削除されるのでここで数字が被ってもOK
 
         // 配列の中からran番目の文字列を1つ定数vに入れる
         // spliceはfruitsからran番目の物を削除するので重複を避けられる
-        const v = fruits.splice(ran, 1);
-        // console.log(v);
+        const v = scenarios.splice(ran, 1);
 
         // scenarioというクラス名をもつdivを取り出し配列にする
         const scenarioArray = Array.from(document.getElementsByClassName("scenario"));
@@ -32,40 +32,6 @@ $("#sss").click(function () {
 
         // <div class="u scenario">u</div>などを.showのhtmlに追加しdisplay:block;にする
         $('.show').append(result).children().addClass('mieru');//
-    }
-});
-
-
-// ストーリー開始ボタン
-$("#btn").click(function () {
-    const a = [0, 1]
-    const r = Math.floor(Math.random() * a.length);
-    if (r == 0) {
-        $('#janken1').show();
-        $(".nextStory").show();
-        $(".nextStory").click(function () {
-            $('#janken1').hide();
-            $('#janken2').show();
-            $(".nextStory").click(function () {
-                $('#janken2').hide();
-                $('#end').show();
-                $(".nextStory").hide();
-            });
-        });
-    }
-    if (r == 1) {
-        $('#janken2').show();
-        $(".nextStory").show();
-        $(".nextStory").click(function () {
-            $('#janken2').hide();
-            $('#janken1').show();
-            $(".nextStory").click(function () {
-                $('#janken1').hide();
-                $('#end').show();
-                $(".nextStory").hide();
-            });
-
-        });
     }
 });
 
