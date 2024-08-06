@@ -6,7 +6,21 @@ $('#hardBtn').click(function () {
 // シナリオ並び替え
 $("#btn").click(function () {
     $('.endBtn').show();
+
+    // ランダムイベントとスペシャルイベントの発生
     const scenarios = ["s1", "s2", "s3", "s4", "s5"];
+    const randomEvent = Math.floor(Math.random() * 3);
+    console.log(randomEvent);
+    if (randomEvent == 0) {
+        scenarios.push("s6");
+    } else if (randomEvent == 1) {
+        scenarios.push("s7");
+    } else if (randomEvent == 2) {
+    }
+
+
+
+    console.log(scenarios);
     const n = scenarios.length;//ループ5回実行確定させる
     for (let i = 0; i < n; i++) {
         // ランダムな数字を定数ranに入れる(配列の数の範囲で)
@@ -56,100 +70,44 @@ $('#hardBtn').click(function () {
     }
 });
 
-
+//パーティー
 // グーを選んだ時
 $(".gu_btn1").on("click", function () {
-    const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
-
-
-    //2.if分岐処理
-
-    if (r == 1) {
-        hand = '<img src="./img/gu.png" width="100px">';
-        judge = 'あいこ';
-        score1 = 0;
-    }
-    if (r == 2) {
-        hand = '<img src="./img/choki.png" width="100px">';
-        judge = '勝ち';
-        score1 = 1;
-    }
-    if (r == 3) {
-        hand = '<img src="./img/pa.png" width="100px">';
-        judge = '負け';
-        score1 = -1;
-    }
+    hand = '王子：フンッ悪役令嬢がまたやってやがる';
+    judge = '普通';
+    score1 = 0;
 
     totalfunc();
 
     //3.表示処理
     jankenView1();
-    // エンディング
-    end();
 
 });
 
 // チョキを選んだ時
 $(".cho_btn1").on("click", function () {
-    const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
+    hand = '王子：何を今さら、か弱い女を演じているんだ';
+    judge = '幻滅';
+    score1 = -1;
 
-    //2.if分岐処理
-    if (r == 1) {
-        hand = '<img src="./img/gu.png" width="100px">';
-        judge = '負け';
-        score1 = -1;
-    }
-    if (r == 2) {
-        hand = '<img src="./img/choki.png" width="100px">';
-        judge = 'あいこ';
-        score1 = 0;
-    }
-    if (r == 3) {
-        hand = '<img src="./img/pa.png" width="100px">';
-        judge = '勝ち';
-        score1 = 1;
-
-    }
-
-    // total = score1 + score2;
     totalfunc();
-
-
 
     //3.表示処理
     jankenView1();
-    // エンディング
-    end();
 
 });
 
 // パーを選んだ時
 $(".par_btn1").on("click", function () {
-    const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
-    //2.if分岐処理
-    if (r == 1) {
-        hand = '<img src="./img/gu.png" width="100px">';
-        judge = '勝ち';
-        score1 = 1;
-    }
-    if (r == 2) {
-        hand = '<img src="./img/choki.png" width="100px">';
-        judge = '負け';
-        score1 = -1;
-    }
-    if (r == 3) {
-        hand = '<img src="./img/pa.png" width="100px">';
-        judge = 'あいこ';
-        score1 = 0;
-    }
-    // total = score1 + score2;
+    hand = '王子：やるじゃねえか';
+    judge = '好感';
+    score1 = 1;
     totalfunc();
 
 
     //3.表示処理
     jankenView1();
-    // エンディング
-    end();
+
 });
 
 //3.表示処理
@@ -195,8 +153,7 @@ $(".gu_btn2").on("click", function () {
 
     //3.表示処理
     jankenView2();
-    // エンディング
-    end();
+
 
 });
 
@@ -228,8 +185,7 @@ $(".cho_btn2").on("click", function () {
 
     //3.表示処理
     jankenView2();
-    // エンディング
-    end();
+
 
 });
 
@@ -259,8 +215,7 @@ $(".par_btn2").on("click", function () {
     //3.表示処理
     jankenView2();
 
-    // エンディング
-    end();
+
 });
 
 //3.表示処理
