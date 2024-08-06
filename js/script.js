@@ -413,3 +413,7 @@ if (totalw >= 1) {
 } else if (totalw < 0) {
     $(".endtxt").text("処刑");
 }
+
+$('#repeat').click(function () {
+    localStorage.removeItem("gachaScore"); //gachaScoreという値を削除
+});
