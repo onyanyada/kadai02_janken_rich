@@ -6,27 +6,32 @@ $('#hardBtn').click(function () {
 
 $("#sss").click(function () {
     const fruits = ["u", "b", "c", "d", "e"];
-    for (let i = 0; i < fruits.length; i++) {
-        // console.log(fruits.length);//OK
-
+    const n = fruits.length;//ループ5回実行確定させる
+    for (let i = 0; i < n; i++) {
         // ランダムな数字を定数ranに入れる(配列の数の範囲で)
         const ran = Math.floor(Math.random() * fruits.length);//0~4
-        console.log(ran);//NG、同じ数が何回も出てしまう。この時点では5回ループ。
-        // すべての数字を一つずつランダムな順序で出力したい
-        // https://www.youtube.com/watch?v=V5KCKbBo000&list=LL&index=38と同じことをしているのに
+        // console.log(ran); //spliceで重複が削除されるのでここで数字が被ってもOK
+
+        // 配列の中からran番目の文字列を1つ定数vに入れる
+        // spliceはfruitsからran番目の物を削除するので重複を避けられる
         const v = fruits.splice(ran, 1);
-        // を使うと削除されループが3回で終わってしまう上に、同じ数が何回も出てしまう
+        // console.log(v);
 
-        // 配列の中からran番目の文字列を定数vに入れる
-        // const v = fruits[ran];
-        console.log(v);
+        // scenarioというクラス名をもつdivを取り出し配列にする
+        const scenarioArray = Array.from(document.getElementsByClassName("scenario"));
+        // console.log(Array.isArray(scenarioArray));// 配列かチェック
+        // console.log(scenarioArray);//div.u.scenarioなど5つが配列で出る
 
-        // const className = document.getElementsByClassName("scenario");
-        // console.log(className);
-        // if (v == className) {
-        //     //classNameのdivをshow();させたい
-        //     $(`.{className}`).show();
-        // }
+        // fruitsから取り出したvの名前をscenarioArrayの中身と形式を合わせる
+        const classShow = `div.${v}.scenario`;
+        // console.log(classShow);//div.u.scenarioなど1つずつループで回されて5つ出る
+
+        // classShowに名前で一致するscenarioArrayの中身をmatchesメソッドで見つける
+        const result = scenarioArray.find(item => item.matches(classShow));
+        // console.log(result); //<div class="u scenario">u</div>がランダム順に5つ出る
+
+        // <div class="u scenario">u</div>などを.showのhtmlに追加しdisplay:block;にする
+        $('.show').append(result).children().addClass('mieru');//
     }
 });
 
