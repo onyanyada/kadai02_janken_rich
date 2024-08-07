@@ -23,15 +23,19 @@ let totalfunc = () => {
     totalPrince = score1Prince + score2Prince + score3Prince + score4Prince + score5Prince;
     // ロッドのトータル計算
     totalL = score1L + score2L + score3L + score4L + score5L;
-}
 
+}
 
 // ハードモード
 $('#hardBtn').click(function () {
-    totalfuncPrince = () => {
-        totalPrince = score1Prince + score2Prince + score3Prince + score4Prince + score5Prince - 2;
+    totalfunc = () => {
+        // 王子のトータル計算
+        totalPrince = score1Prince + score2Prince + score3Prince + score4Prince + score5Prince - 5;
+        // ロッドのトータル計算
+        totalL = score1L + score2L + score3L + score4L + score5L - 5;
     }
 });
+
 
 //s1ここから----------------
 // グーを選んだ時

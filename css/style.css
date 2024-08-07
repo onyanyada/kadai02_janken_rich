@@ -44,3 +44,9 @@ li {
     text-align: center;
     background-color: #fff;
 }
+
+.gachaUsed {
+    color: #8b8a8a;
+    text-decoration: line-through;
+    pointer-events: none;
+}
