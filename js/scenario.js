@@ -1,5 +1,5 @@
 // シナリオここから  
-// 勝敗合計点数
+// 王子の点数
 let totalPrince = 0;
 let response = "";//変数用意
 let judge = ""; //変数用意
@@ -9,10 +9,22 @@ let score3Prince = 0; //変数用意
 let score4Prince = 0; //変数用意
 let score5Prince = 0; //変数用意
 
-// トータル計算
-let totalfuncPrince = () => {
+// ロッドの点数
+let totalL = 0;
+let score1L = 0; //変数用意
+let score2L = 0; //変数用意
+let score3L = 0; //変数用意
+let score4L = 0; //変数用意
+let score5L = 0; //変数用意
+
+// 王子のトータル計算
+let totalfunc = () => {
+    // 王子のトータル計算
     totalPrince = score1Prince + score2Prince + score3Prince + score4Prince + score5Prince;
+    // ロッドのトータル計算
+    totalL = score1L + score2L + score3L + score4L + score5L;
 }
+
 
 // ハードモード
 $('#hardBtn').click(function () {
@@ -27,8 +39,9 @@ $(".gu_btn1").on("click", function () {
     response = '王子：フンッ悪役令嬢がまたやってやがる';
     judge = '普通';
     score1Prince = 0;
+    score1L = 0;
 
-    totalfuncPrince();
+    totalfunc();
 
     //3.表示処理
     resultView1();
@@ -40,8 +53,9 @@ $(".cho_btn1").on("click", function () {
     response = '王子：何を今さら、か弱い女を演じているんだ';
     judge = '幻滅';
     score1Prince = -1;
+    score1L = -1;
 
-    totalfuncPrince();
+    totalfunc();
 
     //3.表示処理
     resultView1();
@@ -53,7 +67,8 @@ $(".par_btn1").on("click", function () {
     response = '王子：やるじゃねえか';
     judge = '好感';
     score1Prince = 1;
-    totalfuncPrince();
+    score1L = 1;
+    totalfunc();
 
 
     //3.表示処理
@@ -83,8 +98,9 @@ $(".gu_btn2").on("click", function () {
     response = '聖女に逃げられた';
     judge = '普通';
     score2Prince = 0;
+    score2L = 0;
 
-    totalfuncPrince();
+    totalfunc();
 
     //3.表示処理
     resultView2();
@@ -96,8 +112,9 @@ $(".cho_btn2").on("click", function () {
     response = '王妃「うるさい蠅ね」';
     judge = '幻滅';
     score2Prince = -1;
+    score2L = -1;
 
-    totalfuncPrince();
+    totalfunc();
 
     //3.表示処理
     resultView2();
@@ -109,6 +126,7 @@ $(".par_btn2").on("click", function () {
     response = '有利な世論を作り上げた';
     judge = '好感';
     score2Prince = 1;
+    score2L = 1;
     totalfunc();
 
 
@@ -121,8 +139,9 @@ $('.gacha_option_btn').on("click", function () {
     response = '王妃「やるわね」';
     judge = '好感';
     score2Prince = 2;
+    score2L = 2;
 
-    totalfuncPrince();
+    totalfunc();
 
     //3.表示処理
     resultView2();
@@ -145,8 +164,9 @@ $(".gu_btn3").on("click", function () {
     response = '悪女にしては聞き分けが良いな';
     judge = '普通';
     score3Prince = 0;
+    score3L = 0;
 
-    totalfuncPrince();
+    totalfunc();
 
     //3.表示処理
     resultView3();
@@ -158,8 +178,9 @@ $(".cho_btn3").on("click", function () {
     response = 'しつこい奴だ';
     judge = '幻滅';
     score3Prince = -1;
+    score3L = -1;
 
-    totalfuncPrince();
+    totalfunc();
 
     //3.表示処理
     resultView3();
@@ -171,7 +192,8 @@ $(".par_btn3").on("click", function () {
     response = 'おもしれー女';
     judge = '好感';
     score3Prince = 1;
-    totalfuncPrince();
+    score3L = 1;
+    totalfunc();
 
 
     //3.表示処理
@@ -195,9 +217,10 @@ const resultView3 = () => {
 $(".gu_btn4").on("click", function () {
     response = '王妃「まあ、考えたじゃない」';
     judge = '普通';
-    score3Prince = 1;
+    score4Prince = 1;
+    score4L = 1;
 
-    totalfuncPrince();
+    totalfunc();
 
     //3.表示処理
     resultView4();
@@ -208,9 +231,10 @@ $(".gu_btn4").on("click", function () {
 $(".cho_btn4").on("click", function () {
     response = '王子「まあ、やるじゃないか」';
     judge = '好感';
-    score3Prince = 2;
+    score4Prince = 2;
+    score4L = 2;
 
-    totalfuncPrince();
+    totalfunc();
 
     //3.表示処理
     resultView4();
@@ -221,8 +245,9 @@ $(".cho_btn4").on("click", function () {
 $(".par_btn4").on("click", function () {
     response = '王子「おもしれー女」';
     judge = '好感';
-    score3Prince = 3;
-    totalfuncPrince();
+    score4Prince = 3;
+    score4L = 3;
+    totalfunc();
 
 
     //3.表示処理
@@ -254,19 +279,22 @@ $(".gu_btn5").on("click", function () {
         response = '<img src="./img/gu.png" width="100px">';
         judge = 'あいこ';
         score5Prince = 0;
+        score5L = 0;
     }
     if (r === 2) {
         response = '<img src="./img/choki.png" width="100px">';
         judge = '勝ち';
         score5Prince = 1;
+        score5L = 1;
     }
     if (r === 3) {
         response = '<img src="./img/pa.png" width="100px">';
         judge = '負け';
         score5Prince = -1;
+        score5L = -1;
     }
 
-    totalfuncPrince();
+    totalfunc();
 
 
     //3.表示処理
@@ -284,20 +312,23 @@ $(".cho_btn5").on("click", function () {
         response = '<img src="./img/gu.png" width="100px">';
         judge = '負け';
         score5Prince = -1;
+        score5L = -1;
     }
     if (r === 2) {
         response = '<img src="./img/choki.png" width="100px">';
         judge = 'あいこ';
         score5Prince = 0;
+        score5L = 0;
     }
     if (r === 3) {
         response = '<img src="./img/pa.png" width="100px">';
         judge = '勝ち';
         score5Prince = 1;
+        score5L = 1;
 
     }
 
-    totalfuncPrince();
+    totalfunc();
 
 
     //3.表示処理
@@ -314,18 +345,21 @@ $(".par_btn5").on("click", function () {
         response = '<img src="./img/gu.png" width="100px">';
         judge = '勝ち';
         score5Prince = 1;
+        score5L = 1;
     }
     if (r === 2) {
         response = '<img src="./img/choki.png" width="100px">';
         judge = '負け';
         score5Prince = -1;
+        score5L = -1;
     }
     if (r === 3) {
         response = '<img src="./img/pa.png" width="100px">';
         judge = 'あいこ';
         score5Prince = 0;
+        score5L = 0;
     }
-    totalfuncPrince();
+    totalfunc();
 
 
     //3.表示処理
