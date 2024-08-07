@@ -26,15 +26,15 @@ let totalfunc = () => {
 
 }
 
-// ハードモード
-$('#hardBtn').click(function () {
-    totalfunc = () => {
-        // 王子のトータル計算
-        totalPrince = score1Prince + score2Prince + score3Prince + score4Prince + score5Prince - 5;
-        // ロッドのトータル計算
-        totalL = score1L + score2L + score3L + score4L + score5L - 5;
-    }
-});
+
+
+// totalのローカルストレージ保存
+const updateLocalStorageTotal = () => {
+    localStorage.setItem("totalPrince", totalPrince); // 王子のtotalの値を保存
+    localStorage.setItem("totalL", totalL); // ロッドのtotalの値を保存
+}
+
+
 
 
 //s1ここから----------------
@@ -86,8 +86,7 @@ const resultView1 = () => {
     $(".judgment1").html(judge);
     $(".score1Prince").html(score1Prince);
     $(".total1Prince").text(totalPrince);
-    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
-    localStorage.setItem("totalL", totalL); // totalの値を保存
+    updateLocalStorageTotal();
 }
 
 //s1----------------ここまで
@@ -157,8 +156,7 @@ const resultView2 = () => {
     $(".judgment2").html(judge);
     $(".score2Prince").html(score2Prince);
     $(".total2Prince").text(totalPrince);
-    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
-    localStorage.setItem("totalL", totalL); // totalの値を保存
+    updateLocalStorageTotal();
 }
 // ----------------s2ここまで
 
@@ -211,8 +209,7 @@ const resultView3 = () => {
     $(".judgment3").html(judge);
     $(".score3Prince").html(score3Prince);
     $(".total3Prince").text(totalPrince);
-    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
-    localStorage.setItem("totalL", totalL); // totalの値を保存
+    updateLocalStorageTotal();
 }
 // ----------------s3ここまで
 
@@ -266,8 +263,7 @@ const resultView4 = () => {
     $(".judgment4").html(judge);
     $(".score4Prince").html(score4Prince);
     $(".total4Prince").text(totalPrince);
-    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
-    localStorage.setItem("totalL", totalL); // totalの値を保存
+    updateLocalStorageTotal();
 }
 // ----------------s4ここまで
 
@@ -380,8 +376,7 @@ const resultView5 = () => {
     $(".judgment5").html(judge);
     $(".score5Prince").html(score5Prince);
     $(".total5Prince").text(totalPrince);
-    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
-    localStorage.setItem("totalL", totalL); // totalの値を保存
+    updateLocalStorageTotal();
 }
 
 //-------------------s5ランダムイベントここまで
