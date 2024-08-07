@@ -23,7 +23,6 @@ let totalfunc = () => {
     totalPrince = score1Prince + score2Prince + score3Prince + score4Prince + score5Prince;
     // ロッドのトータル計算
     totalL = score1L + score2L + score3L + score4L + score5L;
-
 }
 
 
@@ -33,6 +32,22 @@ const updateLocalStorageTotal = () => {
     localStorage.setItem("totalPrince", totalPrince); // 王子のtotalの値を保存
     localStorage.setItem("totalL", totalL); // ロッドのtotalの値を保存
 }
+
+//結果表示
+const resultView = ({
+    no, // シナリオの番号
+    response,
+    judge,
+    scorePrince,
+    totalPrince,
+}) => {
+    $(`.pc_hands${no}`).html(response);
+    $(`.judgment${no}`).html(judge);
+    $(`.score${no}Prince`).html(scorePrince);
+    $(`.total${no}Prince`).text(totalPrince);
+    updateLocalStorageTotal();
+};
+
 
 
 
@@ -48,7 +63,14 @@ $(".gu_btn1").on("click", function () {
     totalfunc();
 
     //3.表示処理
-    resultView1();
+    // 呼び出し
+    resultView({
+        no: 1,
+        response: response,
+        judge: judge,
+        scorePrince: score1Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
@@ -62,7 +84,14 @@ $(".cho_btn1").on("click", function () {
     totalfunc();
 
     //3.表示処理
-    resultView1();
+    // 呼び出し
+    resultView({
+        no: 1,
+        response: response,
+        judge: judge,
+        scorePrince: score1Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
@@ -76,18 +105,17 @@ $(".par_btn1").on("click", function () {
 
 
     //3.表示処理
-    resultView1();
+    // 呼び出し
+    resultView({
+        no: 1,
+        response: response,
+        judge: judge,
+        scorePrince: score1Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
-//3.表示処理
-const resultView1 = () => {
-    $(".pc_hands1").html(response);
-    $(".judgment1").html(judge);
-    $(".score1Prince").html(score1Prince);
-    $(".total1Prince").text(totalPrince);
-    updateLocalStorageTotal();
-}
 
 //s1----------------ここまで
 
@@ -105,7 +133,14 @@ $(".gu_btn2").on("click", function () {
     totalfunc();
 
     //3.表示処理
-    resultView2();
+    // 呼び出し
+    resultView({
+        no: 2,
+        response: response,
+        judge: judge,
+        scorePrince: score2Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
@@ -119,7 +154,14 @@ $(".cho_btn2").on("click", function () {
     totalfunc();
 
     //3.表示処理
-    resultView2();
+    // 呼び出し
+    resultView({
+        no: 2,
+        response: response,
+        judge: judge,
+        scorePrince: score2Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
@@ -133,7 +175,14 @@ $(".par_btn2").on("click", function () {
 
 
     //3.表示処理
-    resultView2();
+    // 呼び出し
+    resultView({
+        no: 2,
+        response: response,
+        judge: judge,
+        scorePrince: score2Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
@@ -144,20 +193,19 @@ $('.gacha_option_btn').on("click", function () {
     score2L = 2;
 
     totalfunc();
-
     //3.表示処理
-    resultView2();
+    // 呼び出し
+    resultView({
+        no: 2,
+        response: response,
+        judge: judge,
+        scorePrince: score2Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
-//3.表示処理
-const resultView2 = () => {
-    $(".pc_hands2").html(response);
-    $(".judgment2").html(judge);
-    $(".score2Prince").html(score2Prince);
-    $(".total2Prince").text(totalPrince);
-    updateLocalStorageTotal();
-}
+
 // ----------------s2ここまで
 
 // ----------------s3ここから
@@ -171,7 +219,14 @@ $(".gu_btn3").on("click", function () {
     totalfunc();
 
     //3.表示処理
-    resultView3();
+    // 呼び出し
+    resultView({
+        no: 3,
+        response: response,
+        judge: judge,
+        scorePrince: score3Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
@@ -185,7 +240,14 @@ $(".cho_btn3").on("click", function () {
     totalfunc();
 
     //3.表示処理
-    resultView3();
+    // 呼び出し
+    resultView({
+        no: 3,
+        response: response,
+        judge: judge,
+        scorePrince: score3Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
@@ -199,18 +261,17 @@ $(".par_btn3").on("click", function () {
 
 
     //3.表示処理
-    resultView3();
+    // 呼び出し
+    resultView({
+        no: 3,
+        response: response,
+        judge: judge,
+        scorePrince: score3Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
-//3.表示処理
-const resultView3 = () => {
-    $(".pc_hands3").html(response);
-    $(".judgment3").html(judge);
-    $(".score3Prince").html(score3Prince);
-    $(".total3Prince").text(totalPrince);
-    updateLocalStorageTotal();
-}
 // ----------------s3ここまで
 
 
@@ -225,7 +286,14 @@ $(".gu_btn4").on("click", function () {
     totalfunc();
 
     //3.表示処理
-    resultView4();
+    // 呼び出し
+    resultView({
+        no: 4,
+        response: response,
+        judge: judge,
+        scorePrince: score4Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
@@ -239,7 +307,14 @@ $(".cho_btn4").on("click", function () {
     totalfunc();
 
     //3.表示処理
-    resultView4();
+    // 呼び出し
+    resultView({
+        no: 4,
+        response: response,
+        judge: judge,
+        scorePrince: score4Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
@@ -253,18 +328,17 @@ $(".par_btn4").on("click", function () {
 
 
     //3.表示処理
-    resultView4();
+    // 呼び出し
+    resultView({
+        no: 4,
+        response: response,
+        judge: judge,
+        scorePrince: score4Prince,
+        totalPrince: totalPrince,
+    });
 
 });
 
-//3.表示処理
-const resultView4 = () => {
-    $(".pc_hands4").html(response);
-    $(".judgment4").html(judge);
-    $(".score4Prince").html(score4Prince);
-    $(".total4Prince").text(totalPrince);
-    updateLocalStorageTotal();
-}
 // ----------------s4ここまで
 
 
@@ -300,7 +374,14 @@ $(".gu_btn5").on("click", function () {
 
 
     //3.表示処理
-    resultView5();
+    // 呼び出し
+    resultView({
+        no: 5,
+        response: response,
+        judge: judge,
+        scorePrince: score5Prince,
+        totalPrince: totalPrince,
+    });
 
 
 });
@@ -334,7 +415,14 @@ $(".cho_btn5").on("click", function () {
 
 
     //3.表示処理
-    resultView5();
+    // 呼び出し
+    resultView({
+        no: 5,
+        response: response,
+        judge: judge,
+        scorePrince: score5Prince,
+        totalPrince: totalPrince,
+    });
 
 
 });
@@ -365,19 +453,17 @@ $(".par_btn5").on("click", function () {
 
 
     //3.表示処理
-    resultView5();
+    // 呼び出し
+    resultView({
+        no: 5,
+        response: response,
+        judge: judge,
+        scorePrince: score5Prince,
+        totalPrince: totalPrince,
+    });
 
 
 });
-
-//3.表示処理
-const resultView5 = () => {
-    $(".pc_hands5").html(response);
-    $(".judgment5").html(judge);
-    $(".score5Prince").html(score5Prince);
-    $(".total5Prince").text(totalPrince);
-    updateLocalStorageTotal();
-}
 
 //-------------------s5ランダムイベントここまで
 
