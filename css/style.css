@@ -50,3 +50,7 @@ li {
     text-decoration: line-through;
     pointer-events: none;
 }
+
+.openLodTotal {
+    display: none;
+}

@@ -13,7 +13,7 @@ $(".gu_btn6").on("click", function () {
     if (r == 1) {
         gachaImg = '<img src="./img/key.png" width="100px">';
         gachaItem = '鍵';
-        gachaExp = 'ロッドの今回の好感度を一度だけ確認できるよ';
+        gachaExp = 'ロッドの合計好感度を一度だけ確認できるよ';
         gachaScore = -1;
     }
     if (r == 2) {
@@ -51,7 +51,7 @@ $(".cho_btn6").on("click", function () {
     if (r == 1) {
         gachaImg = '<img src="./img/key.png" width="100px">';
         gachaItem = '鍵';
-        gachaExp = 'ロッドの今回の好感度を一度だけ確認できるよ';
+        gachaExp = 'ロッドの合計好感度を一度だけ確認できるよ';
         gachaScore = -1;
     }
     if (r == 2) {
@@ -89,7 +89,7 @@ $(".par_btn6").on("click", function () {
     if (r == 1) {
         gachaImg = '<img src="./img/key.png" width="100px">';
         gachaItem = '鍵';
-        gachaExp = 'ロッドの今回の好感度を一度だけ確認できるよ';
+        gachaExp = 'ロッドの合計好感度を一度だけ確認できるよ';
         gachaScore = -1;
     }
     if (r == 2) {
