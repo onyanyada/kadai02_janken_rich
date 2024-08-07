@@ -49,6 +49,20 @@ $("#btn").click(function () {
     }
 });
 
+// ガチャをストーリーに反映
+// ガチャで取得したアイテム名反映
+const gachaItemGet = localStorage.getItem("gachaItem");
+// ガチャで取得したアイテム画像反映
+const gachaImgGet = localStorage.getItem("gachaImg");
+// ガチャで取得したアイテムのスコア反映
+const gachaScoreGet = localStorage.getItem("gachaScore");
+// スコアを数字にする
+const gachaNumber = parseInt(gachaScoreGet);
+
+$('.gachaItem').text(gachaItemGet);
+$('.gachaImg').html(gachaImgGet);
+
+
 
 // シナリオここから  
 // 勝敗合計点数
@@ -61,14 +75,9 @@ let score3 = 0; //変数用意
 let score4 = 0; //変数用意
 let score5 = 0; //変数用意
 
-// ガチャで取得したアイテムのスコア反映
-const gachaReflect = localStorage.getItem("gachaScore");
-// スコアを数字にする
-const gachaNumber = parseInt(gachaReflect);
-
 // トータル計算
 let totalfunc = () => {
-    total = score1 + score2 + score3 + score4 + score5 + gachaNumber;
+    total = score1 + score2 + score3 + score4 + score5;
 }
 
 // ハードモード
@@ -131,7 +140,7 @@ const resultView1 = () => {
 
 
 // ----------------s2ここから
-if (gachaNumber == -1) {
+if (gachaItemGet === "異国の茶葉") {
     $('.gacha_option_btn').css('display', 'block');
 }
 
@@ -307,17 +316,17 @@ $(".gu_btn5").on("click", function () {
 
     //2.if分岐処理
 
-    if (r == 1) {
+    if (r === 1) {
         response = '<img src="./img/gu.png" width="100px">';
         judge = 'あいこ';
         score5 = 0;
     }
-    if (r == 2) {
+    if (r === 2) {
         response = '<img src="./img/choki.png" width="100px">';
         judge = '勝ち';
         score5 = 1;
     }
-    if (r == 3) {
+    if (r === 3) {
         response = '<img src="./img/pa.png" width="100px">';
         judge = '負け';
         score5 = -1;
@@ -337,17 +346,17 @@ $(".cho_btn5").on("click", function () {
     const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
 
     //2.if分岐処理
-    if (r == 1) {
+    if (r === 1) {
         response = '<img src="./img/gu.png" width="100px">';
         judge = '負け';
         score5 = -1;
     }
-    if (r == 2) {
+    if (r === 2) {
         response = '<img src="./img/choki.png" width="100px">';
         judge = 'あいこ';
         score5 = 0;
     }
-    if (r == 3) {
+    if (r === 3) {
         response = '<img src="./img/pa.png" width="100px">';
         judge = '勝ち';
         score5 = 1;
@@ -367,17 +376,17 @@ $(".cho_btn5").on("click", function () {
 $(".par_btn5").on("click", function () {
     const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
     //2.if分岐処理
-    if (r == 1) {
+    if (r === 1) {
         response = '<img src="./img/gu.png" width="100px">';
         judge = '勝ち';
         score5 = 1;
     }
-    if (r == 2) {
+    if (r === 2) {
         response = '<img src="./img/choki.png" width="100px">';
         judge = '負け';
         score5 = -1;
     }
-    if (r == 3) {
+    if (r === 3) {
         response = '<img src="./img/pa.png" width="100px">';
         judge = 'あいこ';
         score5 = 0;
@@ -408,7 +417,7 @@ $(".total2").text(totalw);
 console.log(totalw);
 if (totalw >= 1) {
     $(".endtxt").text("ハッピーエンド");
-} else if (totalw == 0) {
+} else if (totalw === 0) {
     $(".endtxt").text("修道院");
 } else if (totalw < 0) {
     $(".endtxt").text("処刑");

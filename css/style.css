@@ -19,3 +19,11 @@
 .gacha_option_btn {
     display: none;
 }
+
+.gachaReflect {
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: center;
+    background-color: #fff;
+}
