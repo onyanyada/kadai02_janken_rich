@@ -1,23 +1,23 @@
 // シナリオここから  
 // 勝敗合計点数
-let total = 0;
+let totalPrince = 0;
 let response = "";//変数用意
 let judge = ""; //変数用意
-let score1 = 0; //変数用意
-let score2 = 0; //変数用意
-let score3 = 0; //変数用意
-let score4 = 0; //変数用意
-let score5 = 0; //変数用意
+let score1Prince = 0; //変数用意
+let score2Prince = 0; //変数用意
+let score3Prince = 0; //変数用意
+let score4Prince = 0; //変数用意
+let score5Prince = 0; //変数用意
 
 // トータル計算
-let totalfunc = () => {
-    total = score1 + score2 + score3 + score4 + score5;
+let totalfuncPrince = () => {
+    totalPrince = score1Prince + score2Prince + score3Prince + score4Prince + score5Prince;
 }
 
 // ハードモード
 $('#hardBtn').click(function () {
-    totalfunc = () => {
-        total = score1 + score2 + score3 + score4 + score5 - 2;
+    totalfuncPrince = () => {
+        totalPrince = score1Prince + score2Prince + score3Prince + score4Prince + score5Prince - 2;
     }
 });
 
@@ -26,9 +26,9 @@ $('#hardBtn').click(function () {
 $(".gu_btn1").on("click", function () {
     response = '王子：フンッ悪役令嬢がまたやってやがる';
     judge = '普通';
-    score1 = 0;
+    score1Prince = 0;
 
-    totalfunc();
+    totalfuncPrince();
 
     //3.表示処理
     resultView1();
@@ -39,9 +39,9 @@ $(".gu_btn1").on("click", function () {
 $(".cho_btn1").on("click", function () {
     response = '王子：何を今さら、か弱い女を演じているんだ';
     judge = '幻滅';
-    score1 = -1;
+    score1Prince = -1;
 
-    totalfunc();
+    totalfuncPrince();
 
     //3.表示処理
     resultView1();
@@ -52,8 +52,8 @@ $(".cho_btn1").on("click", function () {
 $(".par_btn1").on("click", function () {
     response = '王子：やるじゃねえか';
     judge = '好感';
-    score1 = 1;
-    totalfunc();
+    score1Prince = 1;
+    totalfuncPrince();
 
 
     //3.表示処理
@@ -65,9 +65,9 @@ $(".par_btn1").on("click", function () {
 const resultView1 = () => {
     $(".pc_hands1").html(response);
     $(".judgment1").html(judge);
-    $(".score1").html(score1);
-    $(".total1").text(total);
-    localStorage.setItem("total", total); // totalの値を保存
+    $(".score1Prince").html(score1Prince);
+    $(".total1Prince").text(totalPrince);
+    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
 }
 
 //s1----------------ここまで
@@ -82,9 +82,9 @@ if (gachaItemGet === "異国の茶葉") {
 $(".gu_btn2").on("click", function () {
     response = '聖女に逃げられた';
     judge = '普通';
-    score2 = 0;
+    score2Prince = 0;
 
-    totalfunc();
+    totalfuncPrince();
 
     //3.表示処理
     resultView2();
@@ -95,9 +95,9 @@ $(".gu_btn2").on("click", function () {
 $(".cho_btn2").on("click", function () {
     response = '王妃「うるさい蠅ね」';
     judge = '幻滅';
-    score2 = -1;
+    score2Prince = -1;
 
-    totalfunc();
+    totalfuncPrince();
 
     //3.表示処理
     resultView2();
@@ -108,7 +108,7 @@ $(".cho_btn2").on("click", function () {
 $(".par_btn2").on("click", function () {
     response = '有利な世論を作り上げた';
     judge = '好感';
-    score2 = 1;
+    score2Prince = 1;
     totalfunc();
 
 
@@ -120,9 +120,9 @@ $(".par_btn2").on("click", function () {
 $('.gacha_option_btn').on("click", function () {
     response = '王妃「やるわね」';
     judge = '好感';
-    score2 = 2;
+    score2Prince = 2;
 
-    totalfunc();
+    totalfuncPrince();
 
     //3.表示処理
     resultView2();
@@ -133,9 +133,9 @@ $('.gacha_option_btn').on("click", function () {
 const resultView2 = () => {
     $(".pc_hands2").html(response);
     $(".judgment2").html(judge);
-    $(".score2").html(score2);
-    $(".total2").text(total);
-    localStorage.setItem("total", total); // totalの値を保存
+    $(".score2Prince").html(score2Prince);
+    $(".total2Prince").text(totalPrince);
+    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
 }
 // ----------------s2ここまで
 
@@ -144,9 +144,9 @@ const resultView2 = () => {
 $(".gu_btn3").on("click", function () {
     response = '悪女にしては聞き分けが良いな';
     judge = '普通';
-    score3 = 0;
+    score3Prince = 0;
 
-    totalfunc();
+    totalfuncPrince();
 
     //3.表示処理
     resultView3();
@@ -157,9 +157,9 @@ $(".gu_btn3").on("click", function () {
 $(".cho_btn3").on("click", function () {
     response = 'しつこい奴だ';
     judge = '幻滅';
-    score3 = -1;
+    score3Prince = -1;
 
-    totalfunc();
+    totalfuncPrince();
 
     //3.表示処理
     resultView3();
@@ -170,8 +170,8 @@ $(".cho_btn3").on("click", function () {
 $(".par_btn3").on("click", function () {
     response = 'おもしれー女';
     judge = '好感';
-    score3 = 1;
-    totalfunc();
+    score3Prince = 1;
+    totalfuncPrince();
 
 
     //3.表示処理
@@ -183,9 +183,9 @@ $(".par_btn3").on("click", function () {
 const resultView3 = () => {
     $(".pc_hands3").html(response);
     $(".judgment3").html(judge);
-    $(".score3").html(score3);
-    $(".total3").text(total);
-    localStorage.setItem("total", total); // totalの値を保存
+    $(".score3Prince").html(score3Prince);
+    $(".total3Prince").text(totalPrince);
+    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
 }
 // ----------------s3ここまで
 
@@ -195,9 +195,9 @@ const resultView3 = () => {
 $(".gu_btn4").on("click", function () {
     response = '王妃「まあ、考えたじゃない」';
     judge = '普通';
-    score3 = 1;
+    score3Prince = 1;
 
-    totalfunc();
+    totalfuncPrince();
 
     //3.表示処理
     resultView4();
@@ -208,9 +208,9 @@ $(".gu_btn4").on("click", function () {
 $(".cho_btn4").on("click", function () {
     response = '王子「まあ、やるじゃないか」';
     judge = '好感';
-    score3 = 2;
+    score3Prince = 2;
 
-    totalfunc();
+    totalfuncPrince();
 
     //3.表示処理
     resultView4();
@@ -221,8 +221,8 @@ $(".cho_btn4").on("click", function () {
 $(".par_btn4").on("click", function () {
     response = '王子「おもしれー女」';
     judge = '好感';
-    score3 = 3;
-    totalfunc();
+    score3Prince = 3;
+    totalfuncPrince();
 
 
     //3.表示処理
@@ -234,9 +234,9 @@ $(".par_btn4").on("click", function () {
 const resultView4 = () => {
     $(".pc_hands4").html(response);
     $(".judgment4").html(judge);
-    $(".score4").html(score3);
-    $(".total4").text(total);
-    localStorage.setItem("total", total); // totalの値を保存
+    $(".score4Prince").html(score3Prince);
+    $(".total4Prince").text(totalPrince);
+    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
 }
 // ----------------s4ここまで
 
@@ -253,20 +253,20 @@ $(".gu_btn5").on("click", function () {
     if (r === 1) {
         response = '<img src="./img/gu.png" width="100px">';
         judge = 'あいこ';
-        score5 = 0;
+        score5Prince = 0;
     }
     if (r === 2) {
         response = '<img src="./img/choki.png" width="100px">';
         judge = '勝ち';
-        score5 = 1;
+        score5Prince = 1;
     }
     if (r === 3) {
         response = '<img src="./img/pa.png" width="100px">';
         judge = '負け';
-        score5 = -1;
+        score5Prince = -1;
     }
 
-    totalfunc();
+    totalfuncPrince();
 
 
     //3.表示処理
@@ -283,21 +283,21 @@ $(".cho_btn5").on("click", function () {
     if (r === 1) {
         response = '<img src="./img/gu.png" width="100px">';
         judge = '負け';
-        score5 = -1;
+        score5Prince = -1;
     }
     if (r === 2) {
         response = '<img src="./img/choki.png" width="100px">';
         judge = 'あいこ';
-        score5 = 0;
+        score5Prince = 0;
     }
     if (r === 3) {
         response = '<img src="./img/pa.png" width="100px">';
         judge = '勝ち';
-        score5 = 1;
+        score5Prince = 1;
 
     }
 
-    totalfunc();
+    totalfuncPrince();
 
 
     //3.表示処理
@@ -313,19 +313,19 @@ $(".par_btn5").on("click", function () {
     if (r === 1) {
         response = '<img src="./img/gu.png" width="100px">';
         judge = '勝ち';
-        score5 = 1;
+        score5Prince = 1;
     }
     if (r === 2) {
         response = '<img src="./img/choki.png" width="100px">';
         judge = '負け';
-        score5 = -1;
+        score5Prince = -1;
     }
     if (r === 3) {
         response = '<img src="./img/pa.png" width="100px">';
         judge = 'あいこ';
-        score5 = 0;
+        score5Prince = 0;
     }
-    totalfunc();
+    totalfuncPrince();
 
 
     //3.表示処理
@@ -338,9 +338,9 @@ $(".par_btn5").on("click", function () {
 const resultView5 = () => {
     $(".pc_hands5").html(response);
     $(".judgment5").html(judge);
-    $(".score5").html(score5);
-    $(".total5").text(total);
-    localStorage.setItem("total", total); // totalの値を保存
+    $(".score5Prince").html(score5Prince);
+    $(".total5Prince").text(totalPrince);
+    localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
 }
 
 //-------------------s5ランダムイベントここまで

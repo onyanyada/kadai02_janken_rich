@@ -1,7 +1,7 @@
 // エンディング
-const totalw = localStorage.getItem("total");
+const totalw = localStorage.getItem("totalPrince");
 $(".total2").text(totalw);
-console.log(totalw);
+
 if (totalw >= 1) {
     $(".endtxt").text("ハッピーエンド");
 } else if (totalw === 0) {
@@ -15,5 +15,5 @@ $('#repeat').click(function () {
     localStorage.removeItem("gachaImg"); //gachaImgという値を削除
     localStorage.removeItem("gachaExp"); //gachaExpという値を削除
     localStorage.removeItem("gachaScore"); //gachaScoreという値を削除
-    localStorage.removeItem("total");//totalという値を削除
+    localStorage.removeItem("totalPrince");//totalという値を削除
 });
