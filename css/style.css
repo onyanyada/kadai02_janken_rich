@@ -1,10 +1,30 @@
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+li {
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.scenario {
+    margin: 30px;
+    padding: 30px;
+}
+
 .s1,
 .s2,
 .s3,
 .s4,
-.s5,
-.s6,
-.s7 {
+.s5 {
     display: none;
 }
 
@@ -12,6 +32,7 @@
     display: block;
 }
 
+/* story.htmlのガチャ */
 .gacha_option_btn {
     display: none;
 }

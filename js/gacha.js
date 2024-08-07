@@ -13,7 +13,7 @@ $(".gu_btn6").on("click", function () {
     if (r == 1) {
         gachaImg = '<img src="./img/key.png" width="100px">';
         gachaItem = '鍵';
-        gachaExp = '誰か1人の好感度を一度だけ確認できるよ';
+        gachaExp = 'ロッドの好感度を1上げることができるよ';
         gachaScore = -1;
     }
     if (r == 2) {
@@ -51,7 +51,7 @@ $(".cho_btn6").on("click", function () {
     if (r == 1) {
         gachaImg = '<img src="./img/key.png" width="100px">';
         gachaItem = '鍵';
-        gachaExp = '誰か1人の好感度を一度だけ確認できるよ';
+        gachaExp = 'ロッドの今回の好感度を一度だけ確認できるよ';
         gachaScore = -1;
     }
     if (r == 2) {
@@ -63,8 +63,8 @@ $(".cho_btn6").on("click", function () {
     if (r == 3) {
         gachaImg = '<img src="./img/maho.png" width="100px">';
         gachaItem = '魔法を使える猫';
-        gachaExp = '好感度がわからない特定の人の好感度を1上げる';
-        gachaScore = 2;
+        gachaExp = 'ロッドの好感度を1上げることができるよ';
+        gachaScore = 1;
 
     }
     if (r == 4) {
@@ -89,7 +89,7 @@ $(".par_btn6").on("click", function () {
     if (r == 1) {
         gachaImg = '<img src="./img/key.png" width="100px">';
         gachaItem = '鍵';
-        gachaExp = '誰か1人の好感度を一度だけ確認できるよ';
+        gachaExp = 'ロッドの今回の好感度を一度だけ確認できるよ';
         gachaScore = -1;
     }
     if (r == 2) {
@@ -101,7 +101,7 @@ $(".par_btn6").on("click", function () {
     if (r == 3) {
         gachaImg = '<img src="./img/maho.png" width="100px">';
         gachaItem = '魔法を使える猫';
-        gachaExp = '好感度がわからない特定の人の好感度を1上げる';
+        gachaExp = 'ロッドの好感度を1上げることができるよ';
         gachaScore = 2;
     }
     if (r == 4) {

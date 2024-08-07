@@ -38,4 +38,5 @@ $('#repeat').click(function () {
     localStorage.removeItem("gachaExp"); //gachaExpという値を削除
     localStorage.removeItem("gachaScore"); //gachaScoreという値を削除
     localStorage.removeItem("totalPrince");//totalという値を削除
+    localStorage.removeItem("totalL");//totalという値を削除
 });

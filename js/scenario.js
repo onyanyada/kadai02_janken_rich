@@ -36,7 +36,7 @@ $('#hardBtn').click(function () {
 //s1ここから----------------
 // グーを選んだ時
 $(".gu_btn1").on("click", function () {
-    response = '王子：フンッ悪役令嬢がまたやってやがる';
+    response = '王子「フンッ」';
     judge = '普通';
     score1Prince = 0;
     score1L = 0;
@@ -50,7 +50,7 @@ $(".gu_btn1").on("click", function () {
 
 // チョキを選んだ時
 $(".cho_btn1").on("click", function () {
-    response = '王子：何を今さら、か弱い女を演じているんだ';
+    response = '王子「何を今さら、か弱い女を演じているんだ」';
     judge = '幻滅';
     score1Prince = -1;
     score1L = -1;
@@ -64,7 +64,7 @@ $(".cho_btn1").on("click", function () {
 
 // パーを選んだ時
 $(".par_btn1").on("click", function () {
-    response = '王子：やるじゃねえか';
+    response = '王子「やるじゃねえか」';
     judge = '好感';
     score1Prince = 1;
     score1L = 1;
@@ -90,9 +90,7 @@ const resultView1 = () => {
 
 
 // ----------------s2ここから
-if (gachaItemGet === "異国の茶葉") {
-    $('.gacha_option_btn').css('display', 'block');
-}
+
 
 // グーを選んだ時
 $(".gu_btn2").on("click", function () {
@@ -163,7 +161,7 @@ const resultView2 = () => {
 // ----------------s3ここから
 // グーを選んだ時
 $(".gu_btn3").on("click", function () {
-    response = '悪女にしては聞き分けが良いな';
+    response = '王子「悪女にしては聞き分けが良いな」';
     judge = '普通';
     score3Prince = 0;
     score3L = 0;
@@ -177,7 +175,7 @@ $(".gu_btn3").on("click", function () {
 
 // チョキを選んだ時
 $(".cho_btn3").on("click", function () {
-    response = 'しつこい奴だ';
+    response = '王子「しつこい奴だ」';
     judge = '幻滅';
     score3Prince = -1;
     score3L = -1;
@@ -191,7 +189,7 @@ $(".cho_btn3").on("click", function () {
 
 // パーを選んだ時
 $(".par_btn3").on("click", function () {
-    response = 'おもしれー女';
+    response = '王子「おもしれー女」';
     judge = '好感';
     score3Prince = 1;
     score3L = 1;
@@ -232,7 +230,7 @@ $(".gu_btn4").on("click", function () {
 
 // チョキを選んだ時
 $(".cho_btn4").on("click", function () {
-    response = '王子「まあ、やるじゃないか」';
+    response = '王子「フンッやるじゃないか」';
     judge = '好感';
     score4Prince = 2;
     score4L = 2;
@@ -280,20 +278,20 @@ $(".gu_btn5").on("click", function () {
     //2.if分岐処理
 
     if (r === 1) {
-        response = '<img src="./img/gu.png" width="100px">';
-        judge = 'あいこ';
+        //response = '<img src="./img/gu.png" width="100px">';
+        judge = 'フンッ';
         score5Prince = 0;
         score5L = 0;
     }
     if (r === 2) {
-        response = '<img src="./img/choki.png" width="100px">';
-        judge = '勝ち';
+        //response = '<img src="./img/choki.png" width="100px">';
+        judge = 'ありがとう';
         score5Prince = 1;
         score5L = 1;
     }
     if (r === 3) {
-        response = '<img src="./img/pa.png" width="100px">';
-        judge = '負け';
+        //response = '<img src="./img/pa.png" width="100px">';
+        judge = '毒でも入ってるんじゃないか';
         score5Prince = -1;
         score5L = -1;
     }
@@ -313,20 +311,20 @@ $(".cho_btn5").on("click", function () {
 
     //2.if分岐処理
     if (r === 1) {
-        response = '<img src="./img/gu.png" width="100px">';
-        judge = '負け';
+        //response = '<img src="./img/gu.png" width="100px">';
+        judge = '毒でも入ってるんじゃないか';
         score5Prince = -1;
         score5L = -1;
     }
     if (r === 2) {
-        response = '<img src="./img/choki.png" width="100px">';
-        judge = 'あいこ';
+        //response = '<img src="./img/choki.png" width="100px">';
+        judge = 'フンッ';
         score5Prince = 0;
         score5L = 0;
     }
     if (r === 3) {
-        response = '<img src="./img/pa.png" width="100px">';
-        judge = '勝ち';
+        // response = '<img src="./img/pa.png" width="100px">';
+        judge = 'ありがとう';
         score5Prince = 1;
         score5L = 1;
 
@@ -346,20 +344,20 @@ $(".par_btn5").on("click", function () {
     const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
     //2.if分岐処理
     if (r === 1) {
-        response = '<img src="./img/gu.png" width="100px">';
-        judge = '勝ち';
+        //response = '<img src="./img/gu.png" width="100px">';
+        judge = 'ありがとう';
         score5Prince = 1;
         score5L = 1;
     }
     if (r === 2) {
-        response = '<img src="./img/choki.png" width="100px">';
-        judge = '負け';
+        //response = '<img src="./img/choki.png" width="100px">';
+        judge = '毒でも入ってるんじゃないか';
         score5Prince = -1;
         score5L = -1;
     }
     if (r === 3) {
-        response = '<img src="./img/pa.png" width="100px">';
-        judge = 'あいこ';
+        //response = '<img src="./img/pa.png" width="100px">';
+        judge = 'フンッ';
         score5Prince = 0;
         score5L = 0;
     }

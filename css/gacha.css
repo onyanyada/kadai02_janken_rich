@@ -1,0 +1,17 @@
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+li {
+    list-style: none;
+
+}
+
+li img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    cursor: pointer;
+}
