@@ -58,10 +58,12 @@ const gachaImgGet = localStorage.getItem("gachaImg");
 const gachaScoreGet = localStorage.getItem("gachaScore");
 // スコアを数字にする
 const gachaNumber = parseInt(gachaScoreGet);
+//ガチャで取得したアイテム説明を反映
+const gachaExpGet = localStorage.getItem("gachaExp");
 
 $('.gachaItem').text(gachaItemGet);
 $('.gachaImg').html(gachaImgGet);
-
+$('.gachaExp').html(gachaExpGet);
 
 
 // シナリオここから  
@@ -411,18 +413,3 @@ const resultView5 = () => {
 
 //-------------------s5ランダムイベントここまで
 
-// エンディング
-const totalw = localStorage.getItem("total");
-$(".total2").text(totalw);
-console.log(totalw);
-if (totalw >= 1) {
-    $(".endtxt").text("ハッピーエンド");
-} else if (totalw === 0) {
-    $(".endtxt").text("修道院");
-} else if (totalw < 0) {
-    $(".endtxt").text("処刑");
-}
-
-$('#repeat').click(function () {
-    localStorage.removeItem("gachaScore"); //gachaScoreという値を削除
-});
