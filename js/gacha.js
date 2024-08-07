@@ -5,7 +5,7 @@ let gachaExp = '';
 let gachaScore = 0; //変数用意
 // グーを選んだ時
 $(".gu_btn6").on("click", function () {
-    const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
+    const r = Math.ceil(Math.random() * 4);
 
 
     //2.if分岐処理
@@ -26,6 +26,12 @@ $(".gu_btn6").on("click", function () {
         gachaImg = '<img src="./img/maho.png" width="100px">';
         gachaItem = '魔法を使える猫';
         gachaExp = '好感度がわからない特定の人の好感度を1上げる';
+        gachaScore = 2;
+    }
+    if (r == 4) {
+        gachaImg = '<img src="./img/null.png" width="100px">';
+        gachaItem = 'はずれ';
+        gachaExp = 'ポイ活したらガチャにまた挑戦できるよ';
         gachaScore = 2;
     }
 
@@ -39,7 +45,7 @@ $(".gu_btn6").on("click", function () {
 
 // チョキを選んだ時
 $(".cho_btn6").on("click", function () {
-    const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
+    const r = Math.ceil(Math.random() * 4);
 
     //2.if分岐処理
     if (r == 1) {
@@ -61,6 +67,12 @@ $(".cho_btn6").on("click", function () {
         gachaScore = 2;
 
     }
+    if (r == 4) {
+        gachaImg = '<img src="./img/null.png" width="100px">';
+        gachaItem = 'はずれ';
+        gachaExp = 'ポイ活したらガチャにまた挑戦できるよ';
+        gachaScore = 2;
+    }
 
 
 
@@ -72,7 +84,7 @@ $(".cho_btn6").on("click", function () {
 
 // パーを選んだ時
 $(".par_btn6").on("click", function () {
-    const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
+    const r = Math.ceil(Math.random() * 4);
     //2.if分岐処理
     if (r == 1) {
         gachaImg = '<img src="./img/key.png" width="100px">';
@@ -90,6 +102,12 @@ $(".par_btn6").on("click", function () {
         gachaImg = '<img src="./img/maho.png" width="100px">';
         gachaItem = '魔法を使える猫';
         gachaExp = '好感度がわからない特定の人の好感度を1上げる';
+        gachaScore = 2;
+    }
+    if (r == 4) {
+        gachaImg = '<img src="./img/null.png" width="100px">';
+        gachaItem = 'はずれ';
+        gachaExp = 'ポイ活したらガチャにまた挑戦できるよ';
         gachaScore = 2;
     }
 
@@ -106,6 +124,7 @@ $(".par_btn6").on("click", function () {
 const resultView6 = () => {
     $(".imgItem").html(gachaImg);
     $(".getItem").html(gachaItem);
+    $(".gachaExp").html(gachaExp);
     localStorage.setItem("gachaScore", gachaScore); // ガチャの点数を保存
     localStorage.setItem("gachaItem", gachaItem);//ガチャアイテム名を保存
     localStorage.setItem("gachaImg", gachaImg);//ガチャアイテム画像を保存

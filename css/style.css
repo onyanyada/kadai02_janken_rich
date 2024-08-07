@@ -1,7 +1,3 @@
-.endBtn {
-    display: none;
-}
-
 .s1,
 .s2,
 .s3,
@@ -26,8 +22,4 @@
     top: 0;
     text-align: center;
     background-color: #fff;
-}
-
-#end {
-    display: none;
 }
