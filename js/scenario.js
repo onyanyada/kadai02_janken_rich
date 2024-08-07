@@ -234,7 +234,7 @@ $(".gu_btn4").on("click", function () {
 
 // チョキを選んだ時
 $(".cho_btn4").on("click", function () {
-    response = '王子「フンッやるじゃないか」';
+    response = '王子「フンッ悪女にしては頭が回るな」';
     judge = '好感';
     score4Prince = 2;
     score4L = 2;
@@ -264,7 +264,7 @@ $(".par_btn4").on("click", function () {
 const resultView4 = () => {
     $(".pc_hands4").html(response);
     $(".judgment4").html(judge);
-    $(".score4Prince").html(score3Prince);
+    $(".score4Prince").html(score4Prince);
     $(".total4Prince").text(totalPrince);
     localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
     localStorage.setItem("totalL", totalL); // totalの値を保存
@@ -282,20 +282,20 @@ $(".gu_btn5").on("click", function () {
     //2.if分岐処理
 
     if (r === 1) {
-        //response = '<img src="./img/gu.png" width="100px">';
-        judge = 'フンッ';
+        response = 'ごくごく';
+        judge = '普通';
         score5Prince = 0;
         score5L = 0;
     }
     if (r === 2) {
-        //response = '<img src="./img/choki.png" width="100px">';
-        judge = 'ありがとう';
+        response = 'ありがたく';
+        judge = '好感';
         score5Prince = 1;
         score5L = 1;
     }
     if (r === 3) {
-        //response = '<img src="./img/pa.png" width="100px">';
-        judge = '毒でも入ってるんじゃないか';
+        response = '毒でも入ってるんじゃないか';
+        judge = '幻滅';
         score5Prince = -1;
         score5L = -1;
     }
@@ -315,20 +315,20 @@ $(".cho_btn5").on("click", function () {
 
     //2.if分岐処理
     if (r === 1) {
-        //response = '<img src="./img/gu.png" width="100px">';
-        judge = '毒でも入ってるんじゃないか';
+        response = '毒でも入ってるんじゃないか';
+        judge = '幻滅';
         score5Prince = -1;
         score5L = -1;
     }
     if (r === 2) {
-        //response = '<img src="./img/choki.png" width="100px">';
-        judge = 'フンッ';
+        response = 'ごくごく';
+        judge = '普通';
         score5Prince = 0;
         score5L = 0;
     }
     if (r === 3) {
-        // response = '<img src="./img/pa.png" width="100px">';
-        judge = 'ありがとう';
+        response = 'ありがたく';
+        judge = '好感';
         score5Prince = 1;
         score5L = 1;
 
@@ -348,20 +348,20 @@ $(".par_btn5").on("click", function () {
     const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
     //2.if分岐処理
     if (r === 1) {
-        //response = '<img src="./img/gu.png" width="100px">';
-        judge = 'ありがとう';
+        response = 'ありがたく';
+        judge = '好感';
         score5Prince = 1;
         score5L = 1;
     }
     if (r === 2) {
-        //response = '<img src="./img/choki.png" width="100px">';
-        judge = '毒でも入ってるんじゃないか';
+        response = '毒でも入ってるんじゃないか';
+        judge = '幻滅';
         score5Prince = -1;
         score5L = -1;
     }
     if (r === 3) {
-        //response = '<img src="./img/pa.png" width="100px">';
-        judge = 'フンッ';
+        response = 'ごくごく';
+        judge = '普通';
         score5Prince = 0;
         score5L = 0;
     }
