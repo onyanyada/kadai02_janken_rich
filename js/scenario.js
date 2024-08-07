@@ -83,6 +83,7 @@ const resultView1 = () => {
     $(".score1Prince").html(score1Prince);
     $(".total1Prince").text(totalPrince);
     localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
+    localStorage.setItem("totalL", totalL); // totalの値を保存
 }
 
 //s1----------------ここまで
@@ -155,6 +156,7 @@ const resultView2 = () => {
     $(".score2Prince").html(score2Prince);
     $(".total2Prince").text(totalPrince);
     localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
+    localStorage.setItem("totalL", totalL); // totalの値を保存
 }
 // ----------------s2ここまで
 
@@ -208,6 +210,7 @@ const resultView3 = () => {
     $(".score3Prince").html(score3Prince);
     $(".total3Prince").text(totalPrince);
     localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
+    localStorage.setItem("totalL", totalL); // totalの値を保存
 }
 // ----------------s3ここまで
 
@@ -262,6 +265,7 @@ const resultView4 = () => {
     $(".score4Prince").html(score3Prince);
     $(".total4Prince").text(totalPrince);
     localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
+    localStorage.setItem("totalL", totalL); // totalの値を保存
 }
 // ----------------s4ここまで
 
@@ -375,6 +379,7 @@ const resultView5 = () => {
     $(".score5Prince").html(score5Prince);
     $(".total5Prince").text(totalPrince);
     localStorage.setItem("totalPrince", totalPrince); // totalの値を保存
+    localStorage.setItem("totalL", totalL); // totalの値を保存
 }
 
 //-------------------s5ランダムイベントここまで
