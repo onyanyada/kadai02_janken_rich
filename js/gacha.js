@@ -25,7 +25,7 @@ $(".gu_btn6").on("click", function () {
     if (r == 3) {
         gachaImg = '<img src="./img/maho.png" width="100px">';
         gachaItem = '魔法を使える猫';
-        gachaExp = 'ロッドの好感度を1上げることができるよ';
+        gachaExp = '最初に使うとロッドの好感度を1上げることができるよ';
         gachaScore = 2;
     }
     if (r == 4) {
@@ -63,7 +63,7 @@ $(".cho_btn6").on("click", function () {
     if (r == 3) {
         gachaImg = '<img src="./img/maho.png" width="100px">';
         gachaItem = '魔法を使える猫';
-        gachaExp = 'ロッドの好感度を1上げることができるよ';
+        gachaExp = '最初に使うとロッドの好感度を1上げることができるよ';
         gachaScore = 1;
 
     }
@@ -101,7 +101,7 @@ $(".par_btn6").on("click", function () {
     if (r == 3) {
         gachaImg = '<img src="./img/maho.png" width="100px">';
         gachaItem = '魔法を使える猫';
-        gachaExp = 'ロッドの好感度を1上げることができるよ';
+        gachaExp = '最初に使うとロッドの好感度を1上げることができるよ';
         gachaScore = 2;
     }
     if (r == 4) {
