@@ -11,9 +11,11 @@ const randomEvent = Math.floor(Math.random() * 3);
 console.log(randomEvent);
 if (randomEvent == 0) {
     scenarios.push("s4");
+    scenarios.push("s5");
 } else if (randomEvent == 1) {
     scenarios.push("s5");
 } else if (randomEvent == 2) {
+    scenarios.push("s5");
 }
 
 const n = scenarios.length;//ループ5回実行確定させる
