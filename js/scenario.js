@@ -152,6 +152,8 @@ const result = ({ no, userHand }) => {
     const { response, judge, scorePrince, scoreL } = scenarioResults[`s${no}`][userHand];
     updateScore({ no, scorePrince, scoreL });
     resultView({ no, response, judge, scorePrince, totalPrince });
+
+
 }
 
 // グーを選んだ時
