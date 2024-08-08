@@ -2,7 +2,7 @@
 
 
 $('#saveBtn').click(function () {
-    // alert('セーブしました');
+    alert('セーブしました');
     saveScenarioResults();
     loadScenarioResults();
 });
@@ -52,6 +52,15 @@ const loadScenarioResults = () => {
 
         console.log(load_pc_hands);
     }
+
+    // 最小限のコードで試したが、出来なかった方法↓
+    if (localStorage.getItem("pc_hands1")) {
+        const load_pc_hands = localStorage.getItem("pc_hands1");
+        $(".pc_hands1").text(load_pc_hands);
+    }//クラス名s1：パーティーでライバルに嫌味を言われたのスコアを出し、試したができない
+    // ラーニングシステム【JavaScript】(実習)メモパッドを作ってみようと同じ方法でやっている
+
+
 };
 
 
