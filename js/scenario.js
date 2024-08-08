@@ -1,17 +1,14 @@
 // シナリオここから  
-
 let response = "";//王子の反応
 let judge = ""; //王子のジャッジ
 
 // 王子の点数
 let totalPrince = 0;//王子の合計点数
 let princeScores = [0, 0, 0, 0, 0];//王子の各回の点数の配列
-let scorePrince = 0;//王子の各回の点数
 
 // ロッドの点数
 let totalL = 0;//ロッドの合計点数
 let scoresL = [0, 0, 0, 0, 0];//ロッドの各回の点数の配列
-let scoreL = 0;//ロッドの各回の点数
 
 // 各シナリオのスコア
 const updateScore = ({ no, scorePrince, scoreL }) => {
