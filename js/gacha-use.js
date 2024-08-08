@@ -1,7 +1,8 @@
+// ガチャアイテムを使うボタンをクリック
 $('.gachaUse').click(function () {
     $('.gachaUse').addClass('gachaUsed');
     if (gachaItemGet === "異国の茶葉") {
-        $('.gacha_option_btn').css('display', 'block');
+        $('.gacha_option_btn').css('display', 'inline-block');
     }
 
     else if (gachaItemGet === "鍵") {
@@ -16,19 +17,8 @@ $('.gachaUse').click(function () {
     }
 
     else if (gachaItemGet === "魔法を使える猫") {
-        totalfunc = () => {
-            let tp = 0;//王子の合計点
-            let tl = 1;//ロッドの合計点
-            const l = princeScores.length;
-            for (let i = 0; i < l; i += 1) {
-                // console.log(i, princeScores[i], scoresL[i])
-                tp += princeScores[i];
-                tl += scoresL[i];
-            }
-            totalPrince = tp;
-            totalL = tl;
-        };
-
+        totalL += 1;  // ロッドの合計点数を1増やす
+        updateLocalStorageTotal();  // 更新した値をローカルストレージに保存
     }
 
 });

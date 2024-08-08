@@ -19,7 +19,7 @@ const updateScore = ({ no, scorePrince, scoreL }) => {
 };
 
 
-
+// 合計点
 let totalfunc = () => {
     let tp = 0;//王子の合計点
     let tl = 0;//ロッドの合計点
