@@ -13,8 +13,10 @@ if (randomEvent == 0) {
     scenarios.push("s4");
     scenarios.push("s5");
 } else if (randomEvent == 1) {
+    scenarios.push("s4");
     scenarios.push("s5");
 } else if (randomEvent == 2) {
+    scenarios.push("s4");
     scenarios.push("s5");
 }
 
