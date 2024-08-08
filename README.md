@@ -8,7 +8,7 @@
 
 ## ③DEMO
 
-[](https://onyanyada.github.io/kadai02_janken_rich/)
+https://onyanyada.github.io/kadai02_janken_rich/
 
 ## ④作ったアプリケーション用のIDまたはPasswordがある場合
 
