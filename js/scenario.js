@@ -276,6 +276,10 @@ const randResult = (result) => {
 };
 
 // win = 1, lose = -1, draw = 0;
+// じゃんけんを ぐー = 0, ちょき = 1, ぱー = 2 とすると、自分の手 - 相手の手 は常に数値
+// あいこ = 0
+// 勝ち = -1 または 2
+// 負け = -2 または 1
 const ranJanken = (yourHand, pcHand) => {
     const res = yourHand - pcHand;
     if (res === 0) {
