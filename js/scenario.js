@@ -247,134 +247,73 @@ $(".par_btn4").on("click", function () {
 
 
 
-// ----------------s5ランダムイベントここから  
+// ----------------s5ランダムイベントここから
+const randResult = (result) => {
+    if (result === 1) {
+        return {
+            response: 'ありがたく',
+            judge: '好感',
+            scorePrince: 1,
+            scoreL: 1,
+        };
+    }
+    if (result === -1) {
+        return {
+            response: '毒でも入ってるんじゃないか',
+            judge: '幻滅',
+            scorePrince: -1,
+            scoreL: -1,
+        };
+    }
+    if (result === 0) {
+        return {
+            response: 'ごくごく',
+            judge: '普通',
+            scorePrince: 0,
+            scoreL: 0,
+        };
+    }
+};
+
+// win = 1, lose = -1, draw = 0;
+const ranJanken = (yourHand, pcHand) => {
+    const res = yourHand - pcHand;
+    if (res === 0) {
+        return 0;
+    }
+    if (res === -1 || res === 2) {
+        return 1;
+    }
+
+    return -1;
+};
+
+// 共通のクリックハンドラ
+const handleClick = (no, yourHand) => {
+    const pcHand = Math.floor(Math.random() * 3); // コンピュータの手をランダムに決定
+    const result = ranJanken(yourHand, pcHand); // ranJanken関数を呼び出して結果を取得
+    const { response, judge, scorePrince, scoreL } = randResult(result); // randResult関数を呼び出して結果を取得
+    //↑オブジェクトの分割代入。randResultが返すオブジェクトのプロパティをそれぞれの変数に代入
+
+    updateScore({ no, scorePrince, scoreL });
+
+    // 表示処理
+    resultView({ no, response, judge, scorePrince, totalPrince });
+};
+
 // グーを選んだ時
 $(".gu_btn5").on("click", function () {
-    const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
-
-
-    //2.if分岐処理
-
-    if (r === 1) {
-        response = 'ごくごく';
-        judge = '普通';
-        scorePrince = 0;
-        scoreL = 0;
-        updateScore({ no: 5, scorePrince: 0, scoreL: 0 });
-
-    }
-    if (r === 2) {
-        response = 'ありがたく';
-        judge = '好感';
-        scorePrince = 1;
-        scoreL = 1;
-        updateScore({ no: 5, scorePrince: 1, scoreL: 1 });
-    }
-    if (r === 3) {
-        response = '毒でも入ってるんじゃないか';
-        judge = '幻滅';
-        scorePrince = -1;
-        scoreL = -1;
-        updateScore({ no: 5, scorePrince: -1, scoreL: -1 });
-    }
-
-
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 5,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
-
-
+    handleClick(5, 0); // グーは0
 });
 
 // チョキを選んだ時
 $(".cho_btn5").on("click", function () {
-    const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
-
-    //2.if分岐処理
-    if (r === 1) {
-        response = '毒でも入ってるんじゃないか';
-        judge = '幻滅';
-        scorePrince = -1;
-        scoreL = -1;
-        updateScore({ no: 5, scorePrince: -1, scoreL: -1 });
-    }
-    if (r === 2) {
-        response = 'ごくごく';
-        judge = '普通';
-        scorePrince = 0;
-        scoreL = 0;
-        updateScore({ no: 5, scorePrince: 0, scoreL: 0 });
-    }
-    if (r === 3) {
-        response = 'ありがたく';
-        judge = '好感';
-        scorePrince = 1;
-        scoreL = 1;
-        updateScore({ no: 5, scorePrince: 1, scoreL: 1 });
-    }
-
-
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 5,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
-
-
+    handleClick(5, 1); // チョキは1
 });
 
 // パーを選んだ時
 $(".par_btn5").on("click", function () {
-    const r = Math.ceil(Math.random() * 3);//1.乱数(1~3)
-    //2.if分岐処理
-    if (r === 1) {
-        response = 'ありがたく';
-        judge = '好感';
-        scorePrince = 1;
-        scoreL = 1;
-        updateScore({ no: 5, scorePrince: 1, scoreL: 1 });
-    }
-    if (r === 2) {
-        response = '毒でも入ってるんじゃないか';
-        judge = '幻滅';
-        scorePrince = -1;
-        scoreL = -1;
-        updateScore({ no: 5, scorePrince: -1, scoreL: -1 });
-
-    }
-    if (r === 3) {
-        response = 'ごくごく';
-        judge = '普通';
-        scorePrince = 0;
-        scoreL = 0;
-        updateScore({ no: 5, scorePrince: 0, scoreL: 0 });
-    }
-
-
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 5,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
-
-
+    handleClick(5, 2); // パーは2
 });
 
 //-------------------s5ランダムイベントここまで
