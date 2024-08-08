@@ -23,7 +23,7 @@ const updateScore = ({ no, scorePrince, scoreL }) => {
 
 
 
-const totalfunc = () => {
+let totalfunc = () => {
     let tp = 0;//王子の合計点
     let tl = 0;//ロッドの合計点
     const l = princeScores.length;
@@ -62,66 +62,115 @@ const resultView = ({
 
 
 //s1ここから----------------
+const scenarioResults = {
+    s1: [
+        { // グーを選んだ時の結果
+            response: '王子「フンッ」',
+            judge: '普通',
+            scorePrince: 0,
+            scoreL: 0,
+        },
+        { // チョキを選んだ時
+            response: '王子「何を今さら、か弱い女を演じているんだ」',
+            judge: '幻滅',
+            scorePrince: -1,
+            scoreL: -1,
+        },
+        { // パーを選んだ時
+            response: '王子「やるじゃねえか」',
+            judge: '好感',
+            scorePrince: 1,
+            scoreL: 1,
+        },
+    ],
+    s2: [
+        { // グーを選んだ時の結果
+            response: '聖女に逃げられた',
+            judge: '普通',
+            scorePrince: 0,
+            scoreL: 0,
+        },
+        { // チョキを選んだ時
+            response: '王妃「うるさい蠅ね」',
+            judge: '幻滅',
+            scorePrince: -1,
+            scoreL: -1,
+        },
+        { // パーを選んだ時
+            response: '有利な世論を作り上げた',
+            judge: '好感',
+            scorePrince: 1,
+            scoreL: 1,
+        },
+        { // 異国の茶葉を使ったとき
+            response: '王妃「温室育ちと思いきや、意外とやるじゃない」',
+            judge: '超好感',
+            scorePrince: 2,
+            scoreL: 2,
+        },
+    ],
+    s3: [
+        { // グーを選んだ時の結果
+            response: '王子「悪女にしては聞き分けが良いな」',
+            judge: '普通',
+            scorePrince: 0,
+            scoreL: 0,
+        },
+        { // チョキを選んだ時
+            response: '王子「しつこい奴だ」',
+            judge: '幻滅',
+            scorePrince: -1,
+            scoreL: -1,
+        },
+        { // パーを選んだ時
+            response: '王子「おもしれー女」',
+            judge: '好感',
+            scorePrince: 1,
+            scoreL: 1,
+        },
+    ],
+    s4: [
+        { // グーを選んだ時の結果
+            response: '王妃「まあ、考えたじゃない」',
+            judge: '普通',
+            scorePrince: 0,
+            scoreL: 0,
+        },
+        { // チョキを選んだ時
+            response: '王子「フンッ悪女にしては頭が回るな」',
+            judge: '幻滅',
+            scorePrince: -1,
+            scoreL: -1,
+        },
+        { // パーを選んだ時
+            response: '王子「おもしれー女」',
+            judge: '好感',
+            scorePrince: 1,
+            scoreL: 1,
+        },
+    ],
+};
+
+const result = ({ no, userHand }) => {
+    const { response, judge, scorePrince, scoreL } = scenarioResults[`s${no}`][userHand];
+    updateScore({ no, scorePrince, scoreL });
+    resultView({ no, response, judge, scorePrince, totalPrince });
+}
+
 // グーを選んだ時
 $(".gu_btn1").on("click", function () {
-    response = '王子「フンッ」';
-    judge = '普通';
-
-    scorePrince = 1;
-    scoreL = 0;
-
-    updateScore({ no: 1, scorePrince: 1, scoreL: 0 });
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 1,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
-
+    result({ no: 1, userHand: 0 });
 });
 
 // チョキを選んだ時
 $(".cho_btn1").on("click", function () {
-    response = '王子「何を今さら、か弱い女を演じているんだ」';
-    judge = '幻滅';
-    scorePrince = -1;
-    scoreL = -1;
-    updateScore({ no: 1, scorePrince: -1, scoreL: -1 });
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 1,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
+    result({ no: 1, userHand: 1 });
 
 });
 
 // パーを選んだ時
 $(".par_btn1").on("click", function () {
-    response = '王子「やるじゃねえか」';
-    judge = '好感';
-    scorePrince = 1;
-    scoreL = 1;
-    updateScore({ no: 1, scorePrince: 1, scoreL: 1 });
-
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 1,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
+    result({ no: 1, userHand: 2 });
 
 });
 
@@ -131,87 +180,26 @@ $(".par_btn1").on("click", function () {
 
 // ----------------s2ここから
 
-
 // グーを選んだ時
 $(".gu_btn2").on("click", function () {
-    response = '聖女に逃げられた';
-    judge = '普通';
-    scorePrince = 0;
-    scoreL = 0;
-    updateScore({ no: 2, scorePrince: 0, scoreL: 0 });
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 2,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
-
+    result({ no: 2, userHand: 0 });
 });
 
 // チョキを選んだ時
 $(".cho_btn2").on("click", function () {
-    response = '王妃「うるさい蠅ね」';
-    judge = '幻滅';
-    scorePrince = -1;
-    scoreL = -1;
-    updateScore({ no: 2, scorePrince: -1, scoreL: -1 });
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 2,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
+    result({ no: 2, userHand: 1 });
 
 });
 
 // パーを選んだ時
 $(".par_btn2").on("click", function () {
-    response = '有利な世論を作り上げた';
-    judge = '好感';
-    scorePrince = 1;
-    scoreL = 1;
-    updateScore({ no: 2, scorePrince: 1, scoreL: 1 });
-
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 2,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
+    result({ no: 2, userHand: 2 });
 
 });
 
+//異国の茶葉
 $('.gacha_option_btn').on("click", function () {
-    response = '王妃「やるわね」';
-    judge = '好感';
-    scorePrince = 2;
-    scoreL = 2;
-    updateScore({ no: 2, scorePrince: 2, scoreL: 2 });
-
-
-    totalfunc();
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 2,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
-
+    result({ no: 2, userHand: 3 });
 });
 
 
@@ -220,61 +208,18 @@ $('.gacha_option_btn').on("click", function () {
 // ----------------s3ここから
 // グーを選んだ時
 $(".gu_btn3").on("click", function () {
-    response = '王子「悪女にしては聞き分けが良いな」';
-    judge = '普通';
-    scorePrince = 0;
-    scoreL = 0;
-    updateScore({ no: 3, scorePrince: 0, scoreL: 0 });
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 3,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
-
+    result({ no: 3, userHand: 0 });
 });
 
 // チョキを選んだ時
 $(".cho_btn3").on("click", function () {
-    response = '王子「しつこい奴だ」';
-    judge = '幻滅';
-    scorePrince = -1;
-    scoreL = -1;
-    updateScore({ no: 3, scorePrince: -1, scoreL: -1 });
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 3,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
+    result({ no: 3, userHand: 1 });
 
 });
 
 // パーを選んだ時
 $(".par_btn3").on("click", function () {
-    response = '王子「おもしれー女」';
-    judge = '好感';
-    scorePrince = 1;
-    scoreL = 1;
-    updateScore({ no: 3, scorePrince: 1, scoreL: 1 });
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 3,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
+    result({ no: 3, userHand: 2 });
 
 });
 
@@ -282,65 +227,19 @@ $(".par_btn3").on("click", function () {
 
 
 // ----------------s4ここから
-// グーを選んだ時
 $(".gu_btn4").on("click", function () {
-    response = '王妃「まあ、考えたじゃない」';
-    judge = '普通';
-    scorePrince = 1;
-    scoreL = 1;
-    updateScore({ no: 4, scorePrince: 1, scoreL: 1 });
-
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 4,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
-
+    result({ no: 4, userHand: 0 });
 });
 
 // チョキを選んだ時
 $(".cho_btn4").on("click", function () {
-    response = '王子「フンッ悪女にしては頭が回るな」';
-    judge = '好感';
-    scorePrince = 2;
-    scoreL = 2;
-    updateScore({ no: 4, scorePrince: 2, scoreL: 2 });
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 4,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
+    result({ no: 4, userHand: 1 });
 
 });
 
 // パーを選んだ時
 $(".par_btn4").on("click", function () {
-    response = '王子「おもしれー女」';
-    judge = '好感';
-    scorePrince = 3;
-    scoreL = 3;
-    updateScore({ no: 4, scorePrince: 3, scoreL: 3 });
-
-
-    //3.表示処理
-    // 呼び出し
-    resultView({
-        no: 4,
-        response: response,
-        judge: judge,
-        scorePrince: scorePrince,
-        totalPrince: totalPrince,
-    });
+    result({ no: 4, userHand: 2 });
 
 });
 

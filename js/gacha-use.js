@@ -17,11 +17,17 @@ $('.gachaUse').click(function () {
 
     else if (gachaItemGet === "魔法を使える猫") {
         totalfunc = () => {
-            // 王子のトータル計算
-            totalPrince = score1Prince + score2Prince + score3Prince + score4Prince + score5Prince;
-            // ロッドのトータル計算
-            totalL = score1L + score2L + score3L + score4L + score5L + 1;
-        }
+            let tp = 0;//王子の合計点
+            let tl = 1;//ロッドの合計点
+            const l = princeScores.length;
+            for (let i = 0; i < l; i += 1) {
+                // console.log(i, princeScores[i], scoresL[i])
+                tp += princeScores[i];
+                tl += scoresL[i];
+            }
+            totalPrince = tp;
+            totalL = tl;
+        };
 
     }
 
