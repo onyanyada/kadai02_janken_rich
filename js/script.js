@@ -4,7 +4,6 @@ $('#hardBtn').click(function () {
 });
 
 // シナリオ並び替え
-
 // ランダムイベントとスペシャルイベントの発生
 const scenarios = ["s1", "s2", "s3"];
 const randomEvent = Math.floor(Math.random() * 3);
@@ -46,7 +45,7 @@ for (let i = 0; i < n; i++) {
     // <div class="u scenario">u</div>などを.showのhtmlに追加しdisplay:block;にする
     $('.show').append(result).children().addClass('mieru');//
 }
-// });
+
 
 // ガチャをストーリーに反映
 // ガチャで取得したアイテム名反映

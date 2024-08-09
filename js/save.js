@@ -1,4 +1,3 @@
-
 // セーブボタンクリック
 $('#saveBtn').click(function () {
     alert('セーブしました');
@@ -78,10 +77,6 @@ const saveScenarioOrder = () => {
     });
 
 
-    // 以下と同じことをしている
-    // const scenarioClassArray = Array.from(document.getElementsByClassName("scenario")).map(scenario => scenario.className);
-
-
     console.log(scenarioClassArray);//ここまでOK
     // 2.クラス名の配列を保存
     localStorage.setItem("scenarioClassArray", JSON.stringify(scenarioClassArray));
@@ -104,10 +99,13 @@ const loadScenarioOrder = () => {
         const classNameDiv = `<div class = "${className}"></div>`;
         // console.log(classNameDiv);//OK<div class = s4 scenario mieru></div>等が5つ出力
 
-        // ↓できていないところ
-        $('.show').append(classNameDiv);
+        // ↓できていないところ。コンソールでhtmlを確認すると、<div class = s4 scenario mieru></div>などが順番順
+        //に出るが、中身のテキストが入っていない
+        // script.jsの47行目と同じようなことをしているが、結果は同じにならない
+        $('.show').append(classNameDiv).addClass('mieru');
 
-        $('.show').append("わおん");//ができているので↑の書き方がおかしい？
+
+        $('.show').append("わおん");//はできている。
 
 
     });
