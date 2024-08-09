@@ -34,7 +34,7 @@ for (let i = 0; i < n; i++) {
     // console.log(Array.isArray(scenarioArray));// 配列かチェック
     // console.log(scenarioArray);//div.u.scenarioなど5つが配列で出る
 
-    // fruitsから取り出したvの名前をscenarioArrayの中身と形式を合わせる
+    // scenariosから取り出したvの名前をscenarioArrayの中身と形式を合わせる
     const classShow = `div.${v}.scenario`;
     // console.log(classShow);//div.u.scenarioなど1つずつループで回されて5つ出る
 

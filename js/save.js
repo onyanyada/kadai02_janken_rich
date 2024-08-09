@@ -67,47 +67,57 @@ const loadScenarioResults = () => {
 // 各シナリオの順番を配列で保存
 const saveScenarioOrder = () => {
     // 1.現在のクラス名の順番を配列でGET
-    // scenarioというクラス名をもつdivを取り出し配列にする。この状態ではdivも含まれる
-    const scenarioArray = Array.from(document.getElementsByClassName("scenario"));
-    // 各要素のクラス名のみを取り出し配列にする
-    // const scenarioClassArray = scenarioArray.map(scenario => scenario.className);
-    const scenarioClassArray = scenarioArray.map(scenario => {
+    // scenarioというクラス名をもつdivを取り出し配列にする
+    const scenarioOrders = Array.from(document.getElementsByClassName("scenario"));
+    // console.log(scenarioOrders);//div.s2.scenario.mieruなどが順番順に5つ出る
 
-        return scenario.className.replace("mieru", "").trim();
+    // 各要素から "mieru" クラスを削除
+    scenarioOrders.forEach(scenario => {
+        scenario.classList.remove("mieru");
     });
 
+    // console.log(scenarioOrders); // div.s2.scenarioなどが順番順に5つ出る
 
-    console.log(scenarioClassArray);//ここまでOK
-    // 2.クラス名の配列を保存
-    localStorage.setItem("scenarioClassArray", JSON.stringify(scenarioClassArray));
+    // 2.クラス名の配列を保存するため、クラス名だけを抽出する
+    const classNamesArray = scenarioOrders.map(scenario => scenario.className);
+
+    // console.log(classNamesArray); // s1 scenarioなどが順番順に5つ出る
+
+    // 3.クラス名の配列を保存
+    localStorage.setItem("classNamesArray", JSON.stringify(classNamesArray));
+
+    // 注：以下の状態だとdiv要素なので空の配列としてlocalstorageに保存されてしまう
+    // localStorage.setItem("scenarioOrders", JSON.stringify(scenarioOrders));
+
 };
 
 
 // 各シナリオを順番通りにhtmlに並べる
 const loadScenarioOrder = () => {
     // 1.保存されたクラス名の配列を取得
-    const scenarioClassArray = JSON.parse(localStorage.getItem("scenarioClassArray"));
-
-    // 2.現在の追加する場所を空にする
-    const container = document.querySelector('.show'); // 追加する場所を取得
-    container.innerHTML = ''; // 既存のコンテンツをクリア
+    const classNamesArray = JSON.parse(localStorage.getItem("classNamesArray"));
+    // console.log(classNamesArray);// s1 scenarioなどが順番順に5つ出る
 
 
-    // 2. それぞれのクラス名で<div>要素を作成し、HTMLに追加
-    scenarioClassArray.forEach(className => {
+    // 2.scenarioというクラス名をもつdivを取り出し配列にする
+    const scenarioGetAgain = Array.from(document.getElementsByClassName("scenario"));
+    //console.log(scenarioGetAgain);//div.s2.scenario.mieruなどが順番順に5つ出る
 
-        const classNameDiv = `<div class = "${className}"></div>`;
-        // console.log(classNameDiv);//OK<div class = s4 scenario mieru></div>等が5つ出力
-
-        // ↓できていないところ。コンソールでhtmlを確認すると、<div class = s4 scenario mieru></div>などが順番順
-        //に出るが、中身のテキストが入っていない
-        // script.jsの47行目と同じようなことをしているが、結果は同じにならない
-        $('.show').append(classNameDiv).addClass('mieru');
-
-
-        $('.show').append("わおん");//はできている。
-
-
+    // 各要素から "mieru" クラスを削除
+    scenarioGetAgain.forEach(scenario => {
+        scenario.classList.remove("mieru");
     });
+    //console.log(scenarioGetAgain); //div.s2.scenarioなどが順番順に5つ出る
+
+    // 4.classNamesArrayに名前で一致するclassNamesGetAgainの中身をmatchesメソッドで見つける
+    //しかしclassNamesArrayが配列なので、ひとつずつ取り出して比較したい
+    const matchedElements = classNamesArray.map(className => {
+        return scenarioGetAgain.find(item => item.matches(`.${className.split(' ').join('.')}`));
+    });
+
+    //console.log(matchedElements); //div.s1.scenarioなどの形式で一致した要素が出力される
+    // <div class="u scenario">中身</div>などを.showのhtmlに追加しdisplay: block; にする
+    $('.show').append(matchedElements).children().addClass('mieru');
+
 };
 
