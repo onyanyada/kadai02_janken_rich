@@ -1,8 +1,13 @@
 $('#saveBtn').click(function () {
     alert('セーブしました');
     saveScenarioResults();
+});
+
+// リロード時
+$(document).ready(function () {
     loadScenarioResults();
 });
+
 
 // 各シナリオゲームの結果の保存
 const saveScenarioResults = () => {
@@ -40,27 +45,14 @@ const loadScenarioResults = () => {
         const load_scoreL = localStorage.getItem(`score${i}L`);
         const load_totalL = localStorage.getItem(`total${i}L`);
 
-        // console.log(load_pc_hands);//期待通り表示される
-
-        // できないところここから（リロードすると各スコアなどが消えてしまう）
         $(`.pc_hands${i}`).text(load_pc_hands);
         $(`.judgment${i}`).text(load_judgment);
         $(`.score${i}Prince`).text(load_scorePrince);
         $(`.total${i}Prince`).text(load_totalPrince);
         $(`.score${i}L`).text(load_scoreL);
         $(`.total${i}L`).text(load_totalL);
-        // できないところここまで
 
     }
-
-    // 最小限のコードで試したが、出来なかった方法↓
-    if (localStorage.getItem("pc_hands1")) {
-        const load_pc_hands = localStorage.getItem("pc_hands1");
-        $(".pc_hands1").text(load_pc_hands);
-        $(".pc_hands1").text("う");//これも表示されないのでif(localStorage.get…)という条件式がダメそう
-    }
-    //↑クラス名s1：パーティーでライバルに嫌味を言われたのスコアを出し、セーブを試したができない
-    // ラーニングシステム【JavaScript】(実習)メモパッドを作ってみようと同じ方法でやっている
 };
 
 
