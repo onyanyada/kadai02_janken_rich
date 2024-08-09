@@ -1,11 +1,21 @@
+
+// セーブボタンクリック
 $('#saveBtn').click(function () {
     alert('セーブしました');
     saveScenarioResults();
+    saveScenarioOrder();
+    localStorage.setItem('scenarioSaved', 'true'); // フラグを設定
 });
+
 
 // リロード時
 $(document).ready(function () {
-    loadScenarioResults();
+    const ScenarioSaved = localStorage.getItem('scenarioSaved');
+    if (ScenarioSaved === 'true') {
+        loadScenarioResults();
+        loadScenarioOrder();
+        localStorage.removeItem('scenarioSaved'); // フラグをリセット
+    }
 });
 
 
@@ -55,5 +65,51 @@ const loadScenarioResults = () => {
     }
 };
 
+// 各シナリオの順番を配列で保存
+const saveScenarioOrder = () => {
+    // 1.現在のクラス名の順番を配列でGET
+    // scenarioというクラス名をもつdivを取り出し配列にする。この状態ではdivも含まれる
+    const scenarioArray = Array.from(document.getElementsByClassName("scenario"));
+    // 各要素のクラス名のみを取り出し配列にする
+    // const scenarioClassArray = scenarioArray.map(scenario => scenario.className);
+    const scenarioClassArray = scenarioArray.map(scenario => {
 
+        return scenario.className.replace("mieru", "").trim();
+    });
+
+
+    // 以下と同じことをしている
+    // const scenarioClassArray = Array.from(document.getElementsByClassName("scenario")).map(scenario => scenario.className);
+
+
+    console.log(scenarioClassArray);//ここまでOK
+    // 2.クラス名の配列を保存
+    localStorage.setItem("scenarioClassArray", JSON.stringify(scenarioClassArray));
+};
+
+
+// 各シナリオを順番通りにhtmlに並べる
+const loadScenarioOrder = () => {
+    // 1.保存されたクラス名の配列を取得
+    const scenarioClassArray = JSON.parse(localStorage.getItem("scenarioClassArray"));
+
+    // 2.現在の追加する場所を空にする
+    const container = document.querySelector('.show'); // 追加する場所を取得
+    container.innerHTML = ''; // 既存のコンテンツをクリア
+
+
+    // 2. それぞれのクラス名で<div>要素を作成し、HTMLに追加
+    scenarioClassArray.forEach(className => {
+
+        const classNameDiv = `<div class = "${className}"></div>`;
+        // console.log(classNameDiv);//OK<div class = s4 scenario mieru></div>等が5つ出力
+
+        // ↓できていないところ
+        $('.show').append(classNameDiv);
+
+        $('.show').append("わおん");//ができているので↑の書き方がおかしい？
+
+
+    });
+};
 
