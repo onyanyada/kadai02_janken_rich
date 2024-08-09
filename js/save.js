@@ -89,6 +89,11 @@ const saveScenarioOrder = () => {
     // 注：以下の状態だとdiv要素なので空の配列としてlocalstorageに保存されてしまう
     // localStorage.setItem("scenarioOrders", JSON.stringify(scenarioOrders));
 
+    // セーブをクリックしたときに各シナリオが消えないようにする
+    scenarioOrders.forEach(scenario => {
+        scenario.classList.add("mieru");
+    });
+
 };
 
 
