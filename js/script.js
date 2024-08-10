@@ -60,7 +60,7 @@ let currentIndex = 1;
 
 $('#nextScBtn').click(function () {
     // vArrayから順番にvを取得
-    if (currentIndex < vArray.length) {
+    if (currentIndex <= vArray.length + 1) {
         $('#nextScBtn').find('a').attr('href', `#c${vArray[currentIndex]}`);
         //↑vArray[1]→vArray[2]…の順番で使う
         $(`#c${vArray[currentIndex]}`).addClass('pt80');
