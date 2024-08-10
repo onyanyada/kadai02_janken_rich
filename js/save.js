@@ -24,7 +24,6 @@ $('#gachaPageBtn').click(function () {//できた。以下ができてるから
     localStorage.setItem('う', 'true');//できた
     saveScenarioResults();//できた
     saveScenarioOrder();//できた
-
     console.log("test1");//できない
 });
 
@@ -32,7 +31,7 @@ $('#gachaPageBtn').click(function () {//できた。以下ができてるから
 $('#backStoryBtn').click(function () {//できた。以下ができてるから
     localStorage.setItem('え', 'true');//できた
 
-    // const scenarioGachaSaved = localStorage.getItem('scenarioGachaSaved');
+    const scenarioGachaSaved = localStorage.getItem('scenarioGachaSaved');
     console.log(scenarioGachaSaved); //できない
     console.log("test2");//できない
 
