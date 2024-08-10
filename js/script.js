@@ -8,7 +8,7 @@ $('#hardBtn').click(function () {
 // ランダムイベントとスペシャルイベントの発生
 const scenarios = ["s1", "s2", "s3"];
 const randomEvent = Math.floor(Math.random() * 3);
-console.log(randomEvent);
+// console.log(randomEvent);
 if (randomEvent == 0) {
     scenarios.push("s4");
     scenarios.push("s5");
@@ -63,8 +63,11 @@ $('#nextScBtn').click(function () {
     if (currentIndex < vArray.length) {
         $('#nextScBtn').find('a').attr('href', `#c${vArray[currentIndex]}`);
         //↑vArray[1]→vArray[2]…の順番で使う
+        $(`#c${vArray[currentIndex]}`).addClass('pt80');
         currentIndex++;//次のクリック時には次のvを使う
+
     }
+
 });
 
 
