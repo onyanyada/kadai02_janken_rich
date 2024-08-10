@@ -10,19 +10,24 @@
 
 <body>
     <header>
-        <h1>ストーリー</h1>
+        <div class="headerLeft">
+            <h1>ストーリー</h1>
+        </div>
+        <div class="headerRight">
+            <button><a href="index.html">トップに戻る</a></button>
+            <button id="saveBtn">セーブ</button>
+            <button id="hardBtn">ハードモード</button>
+            <button id="gachaPageBtn"><a href="gacha.html">ガチャでアイテムGET</a></button>
+        </div>
     </header>
     <main>
-        <button><a href="index.html">トップに戻る</a></button>
-        <button id="saveBtn">セーブ</button>
-        <button id="hardBtn">ハードモード</button>
-        <button id="gachaPageBtn"><a href="gacha.html">ガチャでアイテムをゲット</a></button>
+
 
         <p class="hardtxt"></p>
         <p class="savetxt"></p>
         <div class="show"></div>
-        <div class="s1 scenario">
-            <h2>パーティーでライバルに嫌味を言われた</h2>
+        <div class="s1 scenario" id="cs1">
+            <h2>1.パーティーでライバルに嫌味を言われた</h2>
             <p>あなたのとる選択肢</p>
             <ul>
                 <button class="gu_btn1">論破する</button>
@@ -39,8 +44,8 @@
                 <p>ロッドの合計好感度<span class="total1L">?</span></p>
             </div>
         </div>
-        <div class="s2 scenario">
-            <h2>お茶会を開く</h2>
+        <div class="s2 scenario" id="cs2">
+            <h2>2.お茶会を開く</h2>
             <p>あなたのとる選択肢</p>
             <ul>
                 <button class="gu_btn2">聖女を仲間にする</button>
@@ -58,8 +63,8 @@
                 <p>ロッドの合計好感度<span class="total2L">?</span></p>
             </div>
         </div>
-        <div class="s3 scenario">
-            <h2>王子との婚約破棄</h2>
+        <div class="s3 scenario" id="cs3">
+            <h2>3.王子との婚約破棄</h2>
             <p>あなたのとる選択肢</p>
             <ul>
                 <button class="gu_btn3">承諾する</button>
@@ -67,7 +72,7 @@
                 <button class="par_btn3">聖女の裏の顔を暴く</button>
             </ul>
             <p>相手の反応は？</p>
-            <p class="pc_hands3"></p>
+            <p class="pc_hands3" id="cs3"></p>
             <div id="result-list">
                 <p class="judgment3"></p>
                 <p>王子の今回の好感度<span class="score3Prince"></span></p>
@@ -77,7 +82,7 @@
             </div>
         </div>
         <div class="s4 scenario">
-            <h2>ラッキーイベント：ライバルとハンカチ刺繍スキルを競う。何を縫う？</h2>
+            <h2>4.ラッキーイベント：ライバルとハンカチ刺繍スキルを競う。何を縫う？</h2>
             <p>あなたのとる選択肢</p>
             <ul>
                 <button class="gu_btn4">王室の象徴、龍</button>
@@ -85,7 +90,7 @@
                 <button class="par_btn4">使用人に決めさせ、ハンカチも縫わせる</button>
             </ul>
             <p>相手の反応は？</p>
-            <p class="pc_hands4"></p>
+            <p class="pc_hands4" id="cs4"></p>
             <div id="result-list">
                 <p class="judgment4"></p>
                 <p>王子の今回の好感度<span class="score4Prince"></span></p>
@@ -94,8 +99,8 @@
                 <p>ロッドの合計好感度<span class="total4L">?</span></p>
             </div>
         </div>
-        <div class="s5 scenario">
-            <h2>ランダムイベント：騎馬大会「のどが渇いた」</h2>
+        <div class="s5 scenario" id="cs5">
+            <h2>5.ランダムイベント：騎馬大会「のどが渇いた」</h2>
             <p>あなたのとる選択肢</p>
             <ul>
                 <button class="gu_btn5">おいしい水をあげる</button>
@@ -113,6 +118,9 @@
             </div>
         </div>
         <button class="endBtn"><a href="end.html">エンディングに進む</a></button>
+        <div class="nextArrow">
+            <button id="nextScBtn"><a href="">次のシナリオへ</a></button>
+        </div>
         <div class="gachaReflect">
             <p>アイテム</p>
             <div class="gachaImg"></div>
