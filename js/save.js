@@ -19,36 +19,33 @@ $(document).ready(function () {//DOMが読み込み終わった段階で以下�
 
 // ガチャページにいってもシナリオの順番や結果を保存
 // 1.ガチャページに遷移するボタンをクリック
-$('#gachaPageBtn').click(function () {//これはできている。以下ができてるから
-    localStorage.setItem('scenarioGachaSaved', 'true'); // フラグ設定：表示される
-    localStorage.setItem('う', 'true');//表示される
-    saveScenarioResults();//保存されている
-    saveScenarioOrder();//保存されている
+$('#gachaPageBtn').click(function () {//できた。以下ができてるから
+    localStorage.setItem('scenarioGachaSaved', 'true'); // フラグ設定：できた
+    localStorage.setItem('う', 'true');//できた
+    saveScenarioResults();//できた
+    saveScenarioOrder();//できた
 
-    console.log("test1");//できてない。なぜ？
+    console.log("test1");//できない
+
+    //2.ガチャページから戻ってくるボタンをクリック
+    $('#backStoryBtn').click(function () {//できた。以下ができてるから
+        localStorage.setItem('え', 'true');//できた
+
+        // const scenarioGachaSaved = localStorage.getItem('scenarioGachaSaved');
+        console.log(scenarioGachaSaved); //できない
+        console.log("test2");//できない
+
+        if (scenarioGachaSaved === 'true') {
+            loadScenarioResults();//できない
+            loadScenarioOrder();//できない
+        }
+
+        loadScenarioResults();//できない
+        loadScenarioOrder();//できない
+
+    });
+
 });
-
-//2.ガチャページから戻ってくるボタンをクリック
-$('#backStoryBtn').click(function () {//これはできている
-    localStorage.setItem('え', 'true');//表示される
-
-    // const scenarioGachaSaved = localStorage.getItem('scenarioGachaSaved');
-    console.log(scenarioGachaSaved); //できてない
-
-    console.log("test2");//できてない
-
-    if (scenarioGachaSaved === 'true') {//
-        loadScenarioResults();//できてない
-        loadScenarioOrder();//できてない
-    }
-
-    loadScenarioResults();//上のifを使わなくてもできてない
-    loadScenarioOrder();//上のifを使わなくてもできてない
-
-
-});
-
-
 
 // 各シナリオゲームの結果の保存
 const saveScenarioResults = () => {
