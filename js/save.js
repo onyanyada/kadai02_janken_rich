@@ -8,7 +8,7 @@ $('#saveBtn').click(function () {
 
 
 // リロード時
-$(document).ready(function () {
+$(document).ready(function () {//DOMが読み込み終わった段階で以下発生
     const ScenarioSaved = localStorage.getItem('scenarioSaved');
     if (ScenarioSaved === 'true') {
         loadScenarioResults();
@@ -16,6 +16,38 @@ $(document).ready(function () {
         localStorage.removeItem('scenarioSaved'); // フラグをリセット
     }
 });
+
+// ガチャページにいってもシナリオの順番や結果を保存
+// 1.ガチャページに遷移するボタンをクリック
+$('#gachaPageBtn').click(function () {//これはできている。以下ができてるから
+    localStorage.setItem('scenarioGachaSaved', 'true'); // フラグ設定：表示される
+    localStorage.setItem('う', 'true');//表示される
+    saveScenarioResults();//保存されている
+    saveScenarioOrder();//保存されている
+
+    console.log("test1");//できてない。なぜ？
+});
+
+//2.ガチャページから戻ってくるボタンをクリック
+$('#backStoryBtn').click(function () {//これはできている
+    localStorage.setItem('え', 'true');//表示される
+
+    // const scenarioGachaSaved = localStorage.getItem('scenarioGachaSaved');
+    console.log(scenarioGachaSaved); //できてない
+
+    console.log("test2");//できてない
+
+    if (scenarioGachaSaved === 'true') {//
+        loadScenarioResults();//できてない
+        loadScenarioOrder();//できてない
+    }
+
+    loadScenarioResults();//上のifを使わなくてもできてない
+    loadScenarioOrder();//上のifを使わなくてもできてない
+
+
+});
+
 
 
 // 各シナリオゲームの結果の保存
@@ -103,7 +135,6 @@ const loadScenarioOrder = () => {
     const classNamesArray = JSON.parse(localStorage.getItem("classNamesArray"));
     // console.log(classNamesArray);// s1 scenarioなどが順番順に5つ出る
 
-
     // 2.scenarioというクラス名をもつdivを取り出し配列にする
     const scenarioGetAgain = Array.from(document.getElementsByClassName("scenario"));
     //console.log(scenarioGetAgain);//div.s2.scenario.mieruなどが順番順に5つ出る
@@ -114,11 +145,17 @@ const loadScenarioOrder = () => {
     });
     //console.log(scenarioGetAgain); //div.s2.scenarioなどが順番順に5つ出る
 
-    // 4.classNamesArrayに名前で一致するclassNamesGetAgainの中身をmatchesメソッドで見つける
+    // 3.classNamesArrayに名前で一致するclassNamesGetAgainの中身をmatchesメソッドで見つける
     //しかしclassNamesArrayが配列なので、ひとつずつ取り出して比較したい
     const matchedElements = classNamesArray.map(className => {
         return scenarioGetAgain.find(item => item.matches(`.${className.split(' ').join('.')}`));
     });
+
+    //find()メソッドは、条件に一致する最初の要素を返す
+    //item.matches()メソッドは、要素が指定したCSSセレクタに一致するかどうかを確認
+    //クラス名にはスペースが含まれているので、.split(' ').join('.') を使用して、
+    //クエリセレクタとして有効な形式に変換しています（例: "s2 scenario" → ".s2.scenario"）。
+
 
     //console.log(matchedElements); //div.s1.scenarioなどの形式で一致した要素が出力される
     // <div class="u scenario">中身</div>などを.showのhtmlに追加しdisplay: block; にする

@@ -3,6 +3,7 @@ $('#hardBtn').click(function () {
     $('.hardtxt').text("ハードモード適用");
 });
 
+
 // シナリオ並び替え
 // ランダムイベントとスペシャルイベントの発生
 const scenarios = ["s1", "s2", "s3"];
