@@ -26,26 +26,26 @@ $('#gachaPageBtn').click(function () {//できた。以下ができてるから
     saveScenarioOrder();//できた
 
     console.log("test1");//できない
+});
 
-    //2.ガチャページから戻ってくるボタンをクリック
-    $('#backStoryBtn').click(function () {//できた。以下ができてるから
-        localStorage.setItem('え', 'true');//できた
+//2.ガチャページから戻ってくるボタンをクリック
+$('#backStoryBtn').click(function () {//できた。以下ができてるから
+    localStorage.setItem('え', 'true');//できた
 
-        // const scenarioGachaSaved = localStorage.getItem('scenarioGachaSaved');
-        console.log(scenarioGachaSaved); //できない
-        console.log("test2");//できない
+    // const scenarioGachaSaved = localStorage.getItem('scenarioGachaSaved');
+    console.log(scenarioGachaSaved); //できない
+    console.log("test2");//できない
 
-        if (scenarioGachaSaved === 'true') {
-            loadScenarioResults();//できない
-            loadScenarioOrder();//できない
-        }
-
+    if (scenarioGachaSaved === 'true') {
         loadScenarioResults();//できない
         loadScenarioOrder();//できない
+    }
 
-    });
+    loadScenarioResults();//できない
+    loadScenarioOrder();//できない
 
 });
+
 
 // 各シナリオゲームの結果の保存
 const saveScenarioResults = () => {
