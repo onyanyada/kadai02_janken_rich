@@ -67,6 +67,10 @@ $('#nextScBtn').click(function () {
         currentIndex++;//次のクリック時には次のvを使う
 
     }
+    if (currentIndex === vArray.length + 1) {
+        $('#nextScBtn').hide();
+        $('#goEndBtn').css('display', 'block');
+    }
 
 });
 

@@ -75,6 +75,17 @@ main {
     display: block;
 }
 
+.endbtnwrapper {
+    width: 100vh;
+}
+
+#goEndBtn {
+    display: none;
+    width: 140px;
+    height: 30px;
+    margin-top: -200px;
+}
+
 /* story.htmlのガチャ */
 .gacha_option_btn {
     display: none;
