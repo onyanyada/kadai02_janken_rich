@@ -53,6 +53,9 @@ for (let i = 0; i < n; i++) {
 
 }
 console.log(vArray);
+
+
+// 次へボタン機能
 // 現在のリンク番号を追跡するためのインデックスを定義
 // vArray[1]から順に使いたいので初期値を1にしている
 // 最初のvArray[0]はすでに表示されている
@@ -60,10 +63,11 @@ let currentIndex = 1;
 
 $('#nextScBtn').click(function () {
     // vArrayから順番にvを取得
-    if (currentIndex <= vArray.length) {//5以下の場合
+    if (currentIndex <= vArray.length) {//5以下の場合:1～4の場合
         $('#nextScBtn').find('a').attr('href', `#c${vArray[currentIndex]}`);
         //↑vArray[1]→vArray[2]…の順番で使う
         $(`#c${vArray[currentIndex]}`).addClass('pt80');
+        console.log(currentIndex);
         console.log(`#c${vArray[currentIndex]}`);
         currentIndex++;//次のクリック時には次のvを使う
 

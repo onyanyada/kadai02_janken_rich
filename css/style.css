@@ -128,14 +128,14 @@ main {
 #goEndBtn {
     display: none;
     width: 140px;
-    height: 30px;
+    height: 25px;
     margin: 0 auto;
     position: relative;
 }
 
 #goEndBtn a {
     width: 140px;
-    height: 30px;
+    height: 25px;
     position: absolute;
     top: 0;
     right: 0;
