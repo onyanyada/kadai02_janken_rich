@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 button {
     cursor: pointer;
 }
@@ -21,8 +25,15 @@ header {
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: #ffffff;
     padding: 0 30px;
+    background-color: #020E34;
+    color: #ffffff;
+}
+
+.for-header {
+    width: 100%;
+    background-color: #020E34;
+    height: 30px;
 }
 
 .headerRight {
@@ -48,12 +59,14 @@ header {
 
 
 main {
-    margin-top: 100px;
+    margin-top: 20px;
+    color: #ffffff;
 }
 
 .scenario {
     height: 100vh;
     width: 100vh;
+    padding: 40px;
 }
 
 .pt80 {
@@ -87,7 +100,7 @@ main {
 
 .endbtnwrapper {
     width: 100%;
-    margin-top: -130px;
+    margin-top: -170px;
 }
 
 #nextScBtn {
@@ -113,6 +126,7 @@ main {
     height: 25px;
     margin: 0 auto;
     position: relative;
+
 }
 
 #goEndBtn a {
@@ -133,8 +147,8 @@ main {
 
 .gachaReflect {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 50px;
+    right: 20px;
     text-align: center;
     width: 300px;
     height: 250px;

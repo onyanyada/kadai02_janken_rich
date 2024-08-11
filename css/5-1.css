@@ -5,27 +5,27 @@ body {
 
 @keyframes bgchange {
     0% {
-        background: #070069;
+        background: #01002c;
     }
 
     /*変化させたい色*/
     25% {
-        background: #026983;
+        background: #02485a;
     }
 
     /*変化させたい色*/
     50% {
-        background: #4a84d1;
+        background: #1653a3;
     }
 
     /*変化させたい色*/
     75% {
-        background: #34aeff;
+        background: #2387ca;
     }
 
     /*変化させたい色*/
     90% {
-        background: #7bc7f7;
+        background: #3b90c5;
     }
 
     /*変化させたい色*/
