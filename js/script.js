@@ -63,7 +63,7 @@ console.log(vArray);
 let currentIndex = 1;
 $('#nextScBtn').click(function () {
     // vArrayから順番にvを取得
-    if (currentIndex <= vArray.length) {//5以下の場合:1～4の場合
+    if (currentIndex <= vArray.length) {//5以下の場合:1～5の場合
         $('#nextScBtn').find('a').attr('href', `#c${vArray[currentIndex]}`);
         //↑vArray[1]→vArray[2]…の順番で使う
         $(`#c${vArray[currentIndex]}`).addClass('pt80');
@@ -77,26 +77,6 @@ $('#nextScBtn').click(function () {
         }
     }
 });
-
-// ★次へボタン機能やり方2
-//以下、#btnLinkShowclickで先に#nextScBtnのリンクを変えてから、#nextScBtnをクリックする
-//という順番に変えたが、上と同じ現象が起こる
-// let currentIndex = 1;
-// $('#btnLinkShow').click(function () {
-//     if (currentIndex <= vArray.length + 1) {//5以下の場合:1～5の場合
-//         $('#nextScBtn').find('a').attr('href', `#c${vArray[currentIndex]}`);
-//         //↑vArray[1]→vArray[2]…の順番で使う
-//         $(`#c${vArray[currentIndex]}`).addClass('pt80');
-//         console.log(currentIndex);
-//         console.log(`#c${vArray[currentIndex]}`);
-//         currentIndex++;//次のクリック時には次のvを使う
-
-//         if (currentIndex === vArray.length + 1) {//5の場合
-//             $('#nextScBtn').hide();
-//             $('#goEndBtn').css('display', 'block');
-//         }
-//     }
-// });
 
 
 
