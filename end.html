@@ -6,23 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ストーリー</title>
     <link rel="stylesheet" href="css/end.css">
+    <link rel="stylesheet" type="text/css" href="css/5-17.css">
+
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <h1>エンディング</h1>
-    </header>
+    </header> -->
     <main>
-        <div class="chose">
-            <p>最後に選ぶ攻略対象は？</p>
-            <button class="chosePrince">王子</button>
-            <button class="choseL">ロッド</button>
+        <div id="particles-js"></div>
+        <div id="wrapper">
+            <!--/wrapper-->
 
-        </div>
-        <div id="end">
-            <p>あなたの好感度は<span class="totalEndScore"></span>点です</p>
-            <p>あなたは<span class="endtxt"></span>ルートです</p>
-            <button id="repeat"><a href="index.html">もう一度やる</a></button>
+            <div class="chose">
+                <p>最後に選ぶ攻略対象は？</p>
+                <button class="chosePrince">王子</button>
+                <button class="choseL">ロッド</button>
+            </div>
+
+            <div id="end">
+                <p>あなたの好感度は<span class="totalEndScore"></span>点です</p>
+                <p>あなたは<span class="endtxt"></span>ルートです</p>
+                <button id="repeat"><a href="index.html">もう一度やる</a></button>
+            </div>
         </div>
 
 
@@ -36,6 +43,12 @@
     <script src="js/gacha-use.js"></script>
     <script src="js/save.js"></script>
     <script src="js/end.js"></script>
+
+
+    <!-- 桜吹雪 -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/5-17.js"></script>
+
 </body>
 
 </html>
