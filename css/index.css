@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+.index-header {
+    width: 100%;
+    padding: 30px;
+}
+
+.index-header h1 {
+    width: 650px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.prologue {
+    margin: 0 auto;
+    width: 770px;
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+}
+
+.pro-option {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.startStory {
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+}
