@@ -11,10 +11,39 @@ ul {
 }
 
 li {
-    list-style: none;
-    margin: 10px 100px;
+    margin: 10px 0px;
 }
 
+/* index.htmlここから */
+.index-header {
+    width: 100%;
+    padding: 30px;
+}
+
+.index-header h1 {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.prologue {
+    margin: 0 auto;
+    width: 705px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.pro-option {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.startStory {
+    margin-top: 50px;
+}
+
+/* index.htmlここまで */
+
+/* story.htmlここから */
 header {
     display: flex;
     justify-content: space-between;
