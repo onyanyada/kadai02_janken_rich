@@ -42,7 +42,7 @@ for (let i = 0; i < n; i++) {
 
     // scenariosから取り出したvの名前をscenarioArrayの中身と形式を合わせる
     const classShow = `div.${v}.scenario`;
-    console.log(classShow);//div.s1.scenarioなど1つずつループで回されて5つ出る
+    //console.log(classShow);//div.s1.scenarioなど1つずつループで回されて5つ出る
 
     // classShowに名前で一致するscenarioArrayの中身をmatchesメソッドで見つける
     const result = scenarioArray.find(item => item.matches(classShow));
@@ -56,18 +56,38 @@ console.log(vArray);
 // 現在のリンク番号を追跡するためのインデックスを定義
 // vArray[1]から順に使いたいので初期値を1にしている
 // 最初のvArray[0]はすでに表示されている
-let currentIndex = 1;
+// let currentIndex = 1;
+
+// $('#nextScBtn').click(function () {
+//     // vArrayから順番にvを取得
+//     if (currentIndex <= vArray.length + 1) {
+//         $('#nextScBtn').find('a').attr('href', `#c${vArray[currentIndex]}`);
+//         //↑vArray[1]→vArray[2]…の順番で使う
+//         $(`#c${vArray[currentIndex]}`).addClass('pt80');
+//         console.log(`#c${vArray[currentIndex]}`);
+//         currentIndex++;//次のクリック時には次のvを使う
+//     }
+//     else if (currentIndex === vArray.length + 2) {
+//         $('#nextScBtn').hide();
+//         $('#goEndBtn').css('display', 'block');
+//     }
+
+// });
+
+let currentIndex = 0;
 
 $('#nextScBtn').click(function () {
     // vArrayから順番にvを取得
-    if (currentIndex <= vArray.length + 1) {
+    if (currentIndex < vArray.length) {
+        currentIndex++;//次のクリック時には次のvを使う
         $('#nextScBtn').find('a').attr('href', `#c${vArray[currentIndex]}`);
         //↑vArray[1]→vArray[2]…の順番で使う
         $(`#c${vArray[currentIndex]}`).addClass('pt80');
-        currentIndex++;//次のクリック時には次のvを使う
+        console.log(currentIndex);
+        console.log(`#c${vArray[currentIndex]}`);
 
     }
-    if (currentIndex === vArray.length + 1) {
+    else if (currentIndex === vArray.length) {
         $('#nextScBtn').hide();
         $('#goEndBtn').css('display', 'block');
     }

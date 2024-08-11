@@ -108,12 +108,39 @@ main {
     margin-top: -130px;
 }
 
+#nextScBtn {
+    width: 120px;
+    height: 25px;
+    position: relative;
+}
+
+#nextScBtn a {
+    display: block;
+    width: 120px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 #goEndBtn {
     display: none;
     width: 140px;
     height: 30px;
     margin: 0 auto;
+    position: relative;
+}
 
+#goEndBtn a {
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 /* story.htmlのガチャ */
