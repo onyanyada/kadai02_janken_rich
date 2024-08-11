@@ -60,13 +60,14 @@ header {
 
 main {
     margin-top: 20px;
-    color: #ffffff;
+
 }
 
 .scenario {
     height: 100vh;
     width: 100vh;
     padding: 40px;
+    color: #ffffff;
 }
 
 .pt80 {
@@ -147,8 +148,8 @@ main {
 
 .gachaReflect {
     position: fixed;
-    bottom: 50px;
-    right: 20px;
+    bottom: 150px;
+    right: 120px;
     text-align: center;
     width: 300px;
     height: 250px;
