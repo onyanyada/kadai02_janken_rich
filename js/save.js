@@ -17,7 +17,7 @@ $(document).ready(function () {//DOMが読み込み終わった段階で以下�
     }
 });
 
-// ガチャページにいってもシナリオの順番や結果を保存
+// ガチャページにいってもシナリオの順番や結果を保存したい
 // 1.ガチャページに遷移するボタンをクリック
 $('#gachaPageBtn').click(function () {//できた。以下ができてるから
     localStorage.setItem('scenarioGachaSaved', 'true'); // フラグ設定：できた
@@ -150,7 +150,7 @@ const loadScenarioOrder = () => {
     //find()メソッドは、条件に一致する最初の要素を返す
     //item.matches()メソッドは、要素が指定したCSSセレクタに一致するかどうかを確認
     //クラス名にはスペースが含まれているので、.split(' ').join('.') を使用して、
-    //クエリセレクタとして有効な形式に変換しています（例: "s2 scenario" → ".s2.scenario"）。
+    //クエリセレクタとして有効な形式に変換（例: "s2 scenario" → ".s2.scenario"）
 
 
     //console.log(matchedElements); //div.s1.scenarioなどの形式で一致した要素が出力される
