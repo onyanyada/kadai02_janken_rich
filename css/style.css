@@ -65,6 +65,17 @@ header {
     margin: 30px 5px;
 }
 
+.hardModeOn {
+    width: 150px;
+    height: 20px;
+    margin: 35px 10px;
+    background-color: rgb(220, 255, 122);
+    font-weight: bold;
+    color: #458d0a;
+
+}
+
+
 main {
     margin-top: 100px;
 }

@@ -1,7 +1,7 @@
 // ハードモードボタン
-$('#hardBtn').click(function () {
-    $('.hardtxt').text("ハードモード適用");
-});
+// $('#hardBtn').click(function () {
+//     $('.hardtxt').text("ハードモード適用");
+// });
 
 
 // シナリオ並び替え
@@ -52,11 +52,11 @@ for (let i = 0; i < n; i++) {
     $('.show').append(result).children().addClass('mieru');//
 
 }
-console.log(vArray);
+// console.log(vArray);
 
 
 
-// ★次へボタン機能やり方1
+// ★次へボタン機能
 // 現在のリンク番号を追跡するためのインデックスを定義
 // vArray[1]から順に使いたいので初期値を1にしている
 // 最初のvArray[0]はすでに表示されている
@@ -67,8 +67,8 @@ $('#nextScBtn').click(function () {
         $('#nextScBtn').find('a').attr('href', `#c${vArray[currentIndex]}`);
         //↑vArray[1]→vArray[2]…の順番で使う
         $(`#c${vArray[currentIndex]}`).addClass('pt80');
-        console.log(currentIndex);
-        console.log(`#c${vArray[currentIndex]}`);
+        // console.log(currentIndex);
+        // console.log(`#c${vArray[currentIndex]}`);
         currentIndex++;//次のクリック時には次のvを使う
 
         if (currentIndex === vArray.length) {//5の場合
