@@ -7,41 +7,10 @@ $('#saveBtn').click(function () {
 });
 
 
-
-
 // クリアボタンclick
 $('#clearBtn').click(function () {
     localStorage.clear();
     clearScenarioResults();
-});
-
-
-// ガチャページにいってもシナリオの順番や結果を保存したい
-// 1.ガチャページに遷移するボタンをクリック
-$('#gachaPageBtn').click(function () {//できた。以下ができてるから
-    localStorage.setItem('scenarioGachaSaved', 'true'); // フラグ設定：できた
-    localStorage.setItem('う', 'true');//できた
-    saveScenarioResults();//できた
-    saveScenarioOrder();//できた
-    console.log("test1");//できない
-});
-
-//2.ガチャページから戻ってくるボタンをクリック
-$('#backStoryBtn').click(function () {//できた。以下ができてるから
-    localStorage.setItem('え', 'true');//できた
-
-    const scenarioGachaSaved = localStorage.getItem('scenarioGachaSaved');
-    console.log(scenarioGachaSaved); //できない
-    console.log("test2");//できない
-
-    if (scenarioGachaSaved === 'true') {
-        loadScenarioResults();//できない
-        loadScenarioOrder();//できない
-    }
-
-    loadScenarioResults();//できない
-    loadScenarioOrder();//できない
-
 });
 
 
@@ -101,7 +70,11 @@ const clearScenarioResults = () => {
         $(`.score${i}L`).text('');
         $(`.total${i}L`).text('');
     }
+    $(".gachaImg").html('');
+    $(".gachaItem").html('');
+    $(".gachaExp").html('');
 };
+
 
 // 各シナリオの順番を配列で保存
 const saveScenarioOrder = () => {
