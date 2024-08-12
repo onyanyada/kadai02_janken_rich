@@ -11,6 +11,7 @@ $('#saveBtn').click(function () {
 $('#clearBtn').click(function () {
     localStorage.clear();
     clearScenarioResults();
+    location.reload();
 });
 
 
@@ -73,6 +74,7 @@ const clearScenarioResults = () => {
     $(".gachaImg").html('');
     $(".gachaItem").html('');
     $(".gachaExp").html('');
+    $('.hardtxt').css('display', 'none');
 };
 
 
