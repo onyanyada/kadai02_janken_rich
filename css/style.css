@@ -19,6 +19,7 @@ li {
 }
 
 /* story.htmlここから */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -42,19 +43,17 @@ header {
     padding-right: 100px;
 }
 
-.headerRight button {
-    height: 30px;
-    margin: 30px 5px;
+.header-btn {
+    padding: 0px 15px;
+    margin: 20px 5px;
 }
 
-.hardModeOn {
-    width: 150px;
-    height: 20px;
-    margin: 35px 10px;
-    background-color: rgb(220, 255, 122);
-    font-weight: bold;
-    color: #458d0a;
+.header-btn a {
+    color: #fff;
+}
 
+.header-btn a:hover {
+    color: #0066aa;
 }
 
 
@@ -87,6 +86,43 @@ main {
     display: block;
 }
 
+button {
+    position: relative;
+    background-color: #0066aa;
+    /* 背景色 */
+    color: white;
+    /* 文字色 */
+    padding: 10px 15px;
+    /* パディング */
+    text-align: center;
+    /* 文字のアライメント */
+    text-decoration: none;
+    /* 文字装飾 */
+    display: inline-block;
+    /* ボタンの表示方法 */
+    font-size: 16px;
+    /* フォントサイズ */
+    font-family: Arial, sans-serif;
+    /* フォント */
+    margin: 4px 2px;
+    /* 外側の余白 */
+    cursor: pointer;
+    /* カーソル */
+    border: none;
+    /* ボーダーなし */
+    border-radius: 5px;
+    /* ボタンの角丸 */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    /* 影 */
+    transition: transform 0.1s ease-in-out;
+    /* トランジション */
+}
+
+button:hover {
+    background-color: #fff;
+    color: #0066aa;
+}
+
 .nextArrow {
     position: fixed;
     bottom: 0;
@@ -94,9 +130,28 @@ main {
     padding: 20px;
 }
 
-.nextArrow button {
+#nextScBtn {
+    width: 150px;
+    height: 40px;
+    position: relative;
     margin: 0 auto;
     display: block;
+
+}
+
+#nextScBtn a {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #ffffff;
+    padding: 7px;
+}
+
+#nextScBtn a:hover {
+    color: #0066aa;
 }
 
 .endbtnwrapper {
@@ -104,40 +159,25 @@ main {
     margin-top: -170px;
 }
 
-#nextScBtn {
-    width: 120px;
-    height: 25px;
-    position: relative;
-}
 
-#nextScBtn a {
-    display: block;
-    width: 120px;
-    height: 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
 
 #goEndBtn {
     display: none;
-    width: 140px;
-    height: 25px;
+    width: 170px;
+    height: 40px;
     margin: 0 auto;
-    position: relative;
-
+    padding: 0;
 }
 
 #goEndBtn a {
-    width: 140px;
-    height: 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    width: 170px;
+    height: 40px;
+    color: #ffffff;
+    padding: 7px;
+}
+
+#goEndBtn a:hover {
+    color: #0066aa;
 }
 
 /* story.htmlのガチャ */

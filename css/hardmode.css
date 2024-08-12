@@ -1,0 +1,267 @@
+.hardModeOn {
+    width: 150px;
+    height: 20px;
+    margin: 35px 10px;
+    color: #041874;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 99px;
+    padding: 15px 20px;
+    margin: 20px 5px;
+    display: inline-block;
+    animation: anim 1s infinite;
+    background-size: 40px 40px;
+    box-shadow: 0px 0px 10px rgb(255, 255, 79);
+}
+
+:root {
+    --colA: rgba(225, 185, 25, 1) 0 60deg;
+    --colB: rgba(255, 255, 35, 1) 90deg;
+    --colC: rgba(225, 185, 25, 1) 180deg 180deg;
+}
+
+
+@keyframes anim {
+
+    0%,
+    100% {
+        background-image: repeating-conic-gradient(from 0deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    1.6% {
+        background-image: repeating-conic-gradient(from 3deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    3.3% {
+        background-image: repeating-conic-gradient(from 6deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    5% {
+        background-image: repeating-conic-gradient(from 9deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    6.6% {
+        background-image: repeating-conic-gradient(from 12deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    8.3% {
+        background-image: repeating-conic-gradient(from 15deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    10% {
+        background-image: repeating-conic-gradient(from 18deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    11.6% {
+        background-image: repeating-conic-gradient(from 21deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    13.3% {
+        background-image: repeating-conic-gradient(from 24deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    15% {
+        background-image: repeating-conic-gradient(from 27deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    16.6% {
+        background-image: repeating-conic-gradient(from 30deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    18.3% {
+        background-image: repeating-conic-gradient(from 33deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    20% {
+        background-image: repeating-conic-gradient(from 36deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    21.6% {
+        background-image: repeating-conic-gradient(from 39deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    23.3% {
+        background-image: repeating-conic-gradient(from 42deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    25% {
+        background-image: repeating-conic-gradient(from 45deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    26.6% {
+        background-image: repeating-conic-gradient(from 48deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    28.3% {
+        background-image: repeating-conic-gradient(from 51deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    30% {
+        background-image: repeating-conic-gradient(from 54deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    31.6% {
+        background-image: repeating-conic-gradient(from 57deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    33.3% {
+        background-image: repeating-conic-gradient(from 60deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    35% {
+        background-image: repeating-conic-gradient(from 63deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    36.6% {
+        background-image: repeating-conic-gradient(from 66deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    38.3% {
+        background-image: repeating-conic-gradient(from 69deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    40% {
+        background-image: repeating-conic-gradient(from 72deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    41.6% {
+        background-image: repeating-conic-gradient(from 75deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    43.3% {
+        background-image: repeating-conic-gradient(from 78deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    45% {
+        background-image: repeating-conic-gradient(from 81deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    46.6% {
+        background-image: repeating-conic-gradient(from 84deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    48.3% {
+        background-image: repeating-conic-gradient(from 87deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    50% {
+        background-image: repeating-conic-gradient(from 90deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    51.6% {
+        background-image: repeating-conic-gradient(from 93deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    53.3% {
+        background-image: repeating-conic-gradient(from 96deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    55% {
+        background-image: repeating-conic-gradient(from 99deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    56.6% {
+        background-image: repeating-conic-gradient(from 102deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    58.3% {
+        background-image: repeating-conic-gradient(from 105deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    60% {
+        background-image: repeating-conic-gradient(from 108deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    61.6% {
+        background-image: repeating-conic-gradient(from 111deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    63.3% {
+        background-image: repeating-conic-gradient(from 114deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    65% {
+        background-image: repeating-conic-gradient(from 117deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    66.6% {
+        background-image: repeating-conic-gradient(from 120deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    68.3% {
+        background-image: repeating-conic-gradient(from 123deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    70% {
+        background-image: repeating-conic-gradient(from 126deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    71.6% {
+        background-image: repeating-conic-gradient(from 129deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    73.3% {
+        background-image: repeating-conic-gradient(from 132deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    75% {
+        background-image: repeating-conic-gradient(from 135deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    76.6% {
+        background-image: repeating-conic-gradient(from 138deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    78.3% {
+        background-image: repeating-conic-gradient(from 141deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    80% {
+        background-image: repeating-conic-gradient(from 144deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    81.6% {
+        background-image: repeating-conic-gradient(from 147deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    83.3% {
+        background-image: repeating-conic-gradient(from 150deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    85% {
+        background-image: repeating-conic-gradient(from 153deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    86.6% {
+        background-image: repeating-conic-gradient(from 156deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    88.3% {
+        background-image: repeating-conic-gradient(from 159deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    90% {
+        background-image: repeating-conic-gradient(from 162deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    91.6% {
+        background-image: repeating-conic-gradient(from 165deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    93.3% {
+        background-image: repeating-conic-gradient(from 168deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    95% {
+        background-image: repeating-conic-gradient(from 171deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    96.6% {
+        background-image: repeating-conic-gradient(from 174deg, var(--colA), var(--colB), var(--colC));
+    }
+
+    98.3% {
+        background-image: repeating-conic-gradient(from 177deg, var(--colA), var(--colB), var(--colC));
+    }
+
+}
