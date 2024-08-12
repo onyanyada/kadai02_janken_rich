@@ -18,6 +18,10 @@ $(document).ready(function () {//DOMが読み込み終わった段階で以下�
             }
             totalPrince = tp;
             totalL = tl;
+            // 合計点が2以下でゲームオーバー
+            if (totalPrince < -2) {
+                window.location.href = 'gameover.html';
+            }
         };
     }
 });
