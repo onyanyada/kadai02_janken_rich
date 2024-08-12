@@ -26,10 +26,42 @@ body {
     margin-top: 50px;
 }
 
-.startStory {
-    margin-top: 50px;
-}
 
 a {
     text-decoration: none;
+}
+
+/* ボタンコンテナのスタイル */
+.button-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    /* ボタンを中央に配置 */
+    gap: 20px;
+}
+
+
+
+a.btn_07 {
+    display: inline-block;
+    /* ボタンをインラインブロックに */
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 160px;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    color: #006688;
+    border-bottom: 2px solid #79dafa;
+    border-radius: 100vh;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+    transition: 0.5s;
+    background-color: #fff;
+}
+
+a.btn_07:hover {
+    color: #fff;
+    background: #27acd9;
+    border-bottom: 2px solid #fff;
+    transform: translateY(3px);
 }
