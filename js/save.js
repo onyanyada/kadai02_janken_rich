@@ -10,12 +10,19 @@ $('#saveBtn').click(function () {
 // リロード時
 $(document).ready(function () {//DOMが読み込み終わった段階で以下発生
     const ScenarioSaved = localStorage.getItem('scenarioSaved');
-    if (ScenarioSaved === 'true') {
+    if (ScenarioSaved === 'true') {//これがないとscenarioもゲーム結果も表示されなくなる
         loadScenarioResults();
         loadScenarioOrder();
         localStorage.removeItem('scenarioSaved'); // フラグをリセット
     }
 });
+
+// クリアボタンclick
+$('#clearBtn').click(function () {
+    localStorage.clear();
+    clearScenarioResults();
+});
+
 
 // ガチャページにいってもシナリオの順番や結果を保存したい
 // 1.ガチャページに遷移するボタンをクリック
@@ -89,6 +96,18 @@ const loadScenarioResults = () => {
         $(`.score${i}L`).text(load_scoreL);
         $(`.total${i}L`).text(load_totalL);
 
+    }
+};
+
+// 各シナリオゲームの結果の保存データをhtmlから削除
+const clearScenarioResults = () => {
+    for (let i = 1; i <= 5; i++) {
+        $(`.pc_hands${i}`).text('');
+        $(`.judgment${i}`).text('');
+        $(`.score${i}Prince`).text('');
+        $(`.total${i}Prince`).text('');
+        $(`.score${i}L`).text('');
+        $(`.total${i}L`).text('');
     }
 };
 
