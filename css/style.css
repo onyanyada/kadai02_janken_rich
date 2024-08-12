@@ -209,35 +209,3 @@ button:hover {
 .openLodTotal {
     display: none;
 }
-
-/* video.html */
-.videoGachaBtn {
-    display: none;
-}
-
-.video-wrapper {
-    width: 100%;
-}
-
-.video-inner {
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#myVideo {
-    position: absolute;
-    display: block;
-}
-
-.close-circle {
-    display: none;
-    position: relative;
-    top: 10px;
-    right: -25px;
-}
-
-.videoGachaBtn {
-    display: block;
-    width: 160px;
-}
