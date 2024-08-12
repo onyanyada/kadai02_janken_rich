@@ -1,3 +1,22 @@
+a {
+    text-decoration: none;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    /* 水平方向に中央揃え */
+    align-items: center;
+    /* ビューポートの高さを100%に */
+    min-height: 700px;
+}
+
+/* end-containerのスタイル */
+.end-container {
+    text-align: center;
+    /* 中央揃え */
+}
+
 #end {
     display: none;
 }
