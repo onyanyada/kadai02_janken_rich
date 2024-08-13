@@ -58,3 +58,12 @@ const resultView6 = () => {
 }
 
 //-------------------ガチャここまで
+
+// ルーレットボタン
+$(".wheel").on("click", function () {
+    if ($(this).hasClass("stopped")) {
+        $(this).removeClass("stopped"); // クラスを外して回転再開
+    } else {
+        $(this).addClass("stopped"); // クラスを追加して回転停止
+    }
+});

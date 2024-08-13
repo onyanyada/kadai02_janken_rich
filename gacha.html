@@ -10,12 +10,29 @@
 
 <body>
     <header>
-        <h1>ガチャ</h1>
+        <h1>ガチャでアイテムゲット</h1>
     </header>
     <main>
-        <h2>ガチャでアイテムをゲット</h2>
-
-        <button class="gu_btn6">ガチャボタン</button>
+        <div class="gu_btn6">
+            <!-- 追加 -->
+            <div class="pointer"></div>
+            <div class="wheel">
+                <!-- セグメント -->
+                <div class="segment"
+                    style="transform: rotate(0deg) skewY(-30deg); background-color: rgb(101, 226, 226);"></div>
+                <div class="segment"
+                    style="transform: rotate(60deg) skewY(-30deg); background-color: rgb(122, 206, 255);"></div>
+                <div class="segment"
+                    style="transform: rotate(120deg) skewY(-30deg); background-color: rgb(156, 247, 250);"></div>
+                <div class="segment"
+                    style="transform: rotate(180deg) skewY(-30deg); background-color: rgb(160, 217, 255);"></div>
+                <div class="segment"
+                    style="transform: rotate(240deg) skewY(-30deg); background-color: rgb(98, 179, 255);"></div>
+                <div class="segment"
+                    style="transform: rotate(300deg) skewY(-30deg); background-color: rgb(117, 155, 236);"></div>
+            </div>
+            <!-- 追加 -->
+        </div>
 
         <p>ゲットしたアイテムは？</p>
         <p class="imgItem"></p>
