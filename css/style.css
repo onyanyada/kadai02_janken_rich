@@ -48,12 +48,13 @@ header {
     margin: 20px 5px;
 }
 
-.header-btn a {
-    color: #fff;
+.header-btn:hover,
+.header-btn:hover a {
+    color: #0066aa;
 }
 
-.header-btn a:hover {
-    color: #0066aa;
+.header-btn a {
+    color: #fff;
 }
 
 

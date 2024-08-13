@@ -1,10 +1,15 @@
 /* video.html */
+a {
+    text-decoration: none;
+}
+
 .videoGachaBtn {
     display: none;
 }
 
 .video-wrapper {
     width: 100%;
+    text-align: center;
 }
 
 .video-inner {
@@ -23,6 +28,7 @@
     position: relative;
     top: 10px;
     right: -25px;
+    cursor: pointer;
 }
 
 .videoGachaBtn {
