@@ -25,13 +25,6 @@ const saveScenarioResults = () => {
         const save_scoreL = $(`.score${i}L`).text();
         const save_totalL = $(`.total${i}L`).text();
 
-        // console.log(save_pc_hands);
-        // console.log(save_judgment);
-        // console.log(save_scorePrince);
-        // console.log(save_totalPrince);
-        // console.log(save_scoreL);
-        // console.log(save_totalL);
-
         localStorage.setItem(`pc_hands${i}`, save_pc_hands);
         localStorage.setItem(`judgment${i}`, save_judgment);
         localStorage.setItem(`score${i}Prince`, save_scorePrince);
