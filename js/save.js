@@ -3,7 +3,9 @@ $('#saveBtn').click(function () {
     alert('セーブしました');
     saveScenarioResults();
     saveScenarioOrder();
+    saveBtnOrder();
     localStorage.setItem('scenarioSaved', 'true'); // フラグを設定
+
 });
 
 
@@ -14,9 +16,16 @@ $('#clearBtn').click(function () {
     location.reload();
 });
 
+// 次へボタンの順番と進行状況を保存
+const saveBtnOrder = () => {
+    // シナリオ並び替え順番を保存
+    localStorage.setItem('vArray', JSON.stringify(vArray));
+    // 現在のシナリオの進行状況を表すcurrentIndexを保存
+    localStorage.setItem("currentIndex", currentIndex);
+};
+
 
 // 各シナリオゲームの結果の保存
-
 // n = scenario.length; //script.jsで定義済み
 const saveScenarioResults = () => {
 
@@ -77,7 +86,7 @@ const saveScenarioOrder = () => {
     // 1.現在のクラス名の順番を配列でGET
     // scenarioというクラス名をもち、.showの子要素のdivを取り出し配列にする
     const scenarioOrders = Array.from(document.querySelectorAll(".show .scenario"));
-    console.log(scenarioOrders);//div.s2.scenario.mieruなどが順番順に5つ出る
+    //console.log(scenarioOrders);//div.s2.scenario.mieruなどが順番順に5つ出る
 
 
     // 各要素から "mieru" クラスを削除
