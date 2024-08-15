@@ -2,7 +2,7 @@ $('#backStoryBtn').click(function () {
     if (ScenarioSaved === 'true') {//これがないとscenarioもゲーム結果も表示されなくなる
         loadScenarioResults();
         loadScenarioOrder();
-
+        loadBtnOrder();
 
         // リロード時に totalPrince と totalL を読み込む
         const savedTotalPrince = localStorage.getItem('totalPrince');
