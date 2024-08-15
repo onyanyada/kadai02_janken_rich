@@ -46,14 +46,12 @@ const loadScenarioResults = () => {
         const load_totalPrince = localStorage.getItem(`total${i}Prince`);
         const load_scoreL = localStorage.getItem(`score${i}L`);
         const load_totalL = localStorage.getItem(`total${i}L`);
-
         $(`.pc_hands${i}`).text(load_pc_hands);
         $(`.judgment${i}`).text(load_judgment);
         $(`.score${i}Prince`).text(load_scorePrince);
         $(`.total${i}Prince`).text(load_totalPrince);
         $(`.score${i}L`).text(load_scoreL);
         $(`.total${i}L`).text(load_totalL);
-
     }
 };
 
