@@ -16,8 +16,11 @@ $('#clearBtn').click(function () {
 
 
 // 各シナリオゲームの結果の保存
+
+// n = scenario.length; //script.jsで定義済み
 const saveScenarioResults = () => {
-    for (let i = 1; i <= 5; i++) {
+
+    for (let i = 1; i <= n; i++) {
         const save_pc_hands = $(`.pc_hands${i}`).text();
         const save_judgment = $(`.judgment${i}`).text();
         const save_scorePrince = $(`.score${i}Prince`).text();
@@ -36,7 +39,7 @@ const saveScenarioResults = () => {
 
 // 各シナリオゲームの結果の保存データ取得表示
 const loadScenarioResults = () => {
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= n; i++) {
         const load_pc_hands = localStorage.getItem(`pc_hands${i}`);
         const load_judgment = localStorage.getItem(`judgment${i}`);
         const load_scorePrince = localStorage.getItem(`score${i}Prince`);
@@ -56,7 +59,7 @@ const loadScenarioResults = () => {
 
 // 各シナリオゲームの結果の保存データをhtmlから削除
 const clearScenarioResults = () => {
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= n; i++) {
         $(`.pc_hands${i}`).text('');
         $(`.judgment${i}`).text('');
         $(`.score${i}Prince`).text('');
@@ -74,9 +77,10 @@ const clearScenarioResults = () => {
 // 各シナリオの順番を配列で保存
 const saveScenarioOrder = () => {
     // 1.現在のクラス名の順番を配列でGET
-    // scenarioというクラス名をもつdivを取り出し配列にする
-    const scenarioOrders = Array.from(document.getElementsByClassName("scenario"));
-    // console.log(scenarioOrders);//div.s2.scenario.mieruなどが順番順に5つ出る
+    // scenarioというクラス名をもち、.showの子要素のdivを取り出し配列にする
+    const scenarioOrders = Array.from(document.querySelectorAll(".show .scenario"));
+    console.log(scenarioOrders);//div.s2.scenario.mieruなどが順番順に5つ出る
+
 
     // 各要素から "mieru" クラスを削除
     scenarioOrders.forEach(scenario => {

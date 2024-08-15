@@ -1,9 +1,3 @@
-// ハードモードボタン
-// $('#hardBtn').click(function () {
-//     $('.hardtxt').text("ハードモード適用");
-// });
-
-
 // シナリオ並び替え
 // ランダムイベントとスペシャルイベントの発生
 const scenarios = ["s1", "s2", "s3"];
@@ -11,16 +5,16 @@ const randomEvent = Math.floor(Math.random() * 3);
 // console.log(randomEvent);
 if (randomEvent == 0) {
     scenarios.push("s4");
-    scenarios.push("s5");
+    // scenarios.push("s5");
 } else if (randomEvent == 1) {
-    scenarios.push("s4");
+    // scenarios.push("s4");
     scenarios.push("s5");
 } else if (randomEvent == 2) {
     scenarios.push("s4");
     scenarios.push("s5");
 }
 
-const n = scenarios.length;//ループ5回実行確定させる
+const n = scenarios.length;//ループをシナリオ回数分実行確定させる
 // まず、vを格納する配列を作成
 const vArray = [];
 for (let i = 0; i < n; i++) {

@@ -14,7 +14,7 @@ $('.gachaUse').click(function () {
 
     else if (gachaItemGet === "はずれ") {
         $('.openLodTotal').css('display', 'block');
-        $('.openLodTotal').text("アイテムは使えません");
+        $('.openLodTotal').text("アイテムは一度しか使えません");
 
     }
 

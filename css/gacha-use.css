@@ -1,0 +1,30 @@
+/* story.htmlのガチャ */
+.gacha_option_btn {
+    display: none;
+    text-align: center;
+}
+
+.gachaReflect {
+    position: fixed;
+    bottom: 150px;
+    right: 120px;
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    padding: 20px;
+}
+
+.gachaExp {
+    margin: 10px 0px;
+}
+
+.gachaUsed {
+    color: #8b8a8a;
+    text-decoration: line-through;
+    pointer-events: none;
+    background-color: #fff;
+}
+
+.openLodTotal {
+    display: none;
+}
