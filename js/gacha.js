@@ -1,13 +1,15 @@
-
-// ----------------ガチャここから
 let gachaImg = '';
 let gachaItem = '';
 let gachaExp = '';
 let gachaScore = 0; //変数用意
-// グーを選んだ時
+
+
+// ルーレットをクリックしたとき
 $(".gu_btn6").on("click", function () {
     const r = Math.ceil(Math.random() * 4);
 
+    $(".gu_btn6").addClass('cantclick');//再clickできなくする
+    localStorage.setItem('clickedGacha', 'true'); // フラグを設定
 
     //2.if分岐処理
 
@@ -57,7 +59,6 @@ const resultView6 = () => {
     localStorage.setItem("gachaExp", gachaExp);//ガチャアイテム説明を保存
 }
 
-//-------------------ガチャここまで
 
 // ルーレットボタン
 $(".wheel").on("click", function () {
@@ -65,5 +66,14 @@ $(".wheel").on("click", function () {
         $(this).removeClass("stopped"); // クラスを外して回転再開
     } else {
         $(this).addClass("stopped"); // クラスを追加して回転停止
+    }
+});
+
+
+// ガチャをリロードしても再clickできなくする
+$(document).ready(function () {//DOMが読み込み終わった段階で以下発生
+    const clickedGachaSaved = localStorage.getItem('clickedGacha');
+    if (clickedGachaSaved === 'true') {//これがないとscenarioもゲーム結果も表示されなくなる
+        $(".gu_btn6").addClass('cantclick');//再clickできなくする
     }
 });

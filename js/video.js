@@ -11,4 +11,5 @@ $('.close-circle').click(function () {
     $('.videoGachaBtn').show();
     $('.close-circle').hide();
     $('#myVideo').hide();
+    localStorage.removeItem('clickedGacha');
 });

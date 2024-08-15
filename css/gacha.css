@@ -18,6 +18,11 @@ body {
     cursor: pointer;
 }
 
+.cantclick {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .wheel {
     position: absolute;
     width: 100%;

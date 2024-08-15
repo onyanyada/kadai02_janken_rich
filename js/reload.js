@@ -34,6 +34,9 @@ $(document).ready(function () {//DOMが読み込み終わった段階で以下�
 
         localStorage.removeItem('scenarioSaved'); // フラグをリセット
     }
+
+
+
 });
 
 // 次へボタンの取得表示
