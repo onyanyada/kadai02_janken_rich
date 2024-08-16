@@ -57,6 +57,8 @@ const resultView6 = () => {
     localStorage.setItem("gachaItem", gachaItem);//ガチャアイテム名を保存
     localStorage.setItem("gachaImg", gachaImg);//ガチャアイテム画像を保存
     localStorage.setItem("gachaExp", gachaExp);//ガチャアイテム説明を保存
+    $('.gachaUseBtn').show();
+    $('.gachaUseExp').hide();
 }
 
 
