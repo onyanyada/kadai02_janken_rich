@@ -1,4 +1,6 @@
 $('#backStoryBtn').click(function () {
+    $('.gachaUseBtn').css('display', 'block');
+
     if (ScenarioSaved === 'true') {//これがないとscenarioもゲーム結果も表示されなくなる
         loadScenarioResults();
         loadScenarioOrder();
