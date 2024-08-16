@@ -29,10 +29,15 @@
     display: none;
 }
 
-.gachaUse {
+/* .gachaUseBtn {
     display: none;
-}
+} */
+
 
 .dn {
     display: none;
+}
+
+.db {
+    display: block;
 }

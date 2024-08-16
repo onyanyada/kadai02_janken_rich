@@ -33,4 +33,5 @@ $('#backStoryBtn').click(function () {
 
         localStorage.removeItem('scenarioSaved'); // フラグをリセット
     }
+
 });

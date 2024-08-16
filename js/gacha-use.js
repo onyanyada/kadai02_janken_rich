@@ -1,8 +1,9 @@
 let gachaEffect = 0;  // ガチャ効果を保存する変数
 
 // ガチャアイテムを使うボタンをクリック
-$('.gachaUse').click(function () {
-    $('.gachaUse').addClass('gachaUsed');
+$('.gachaUseBtn').click(function () {
+    $('.gachaUseBtn').addClass('gachaUsed');
+    $('.gachaUseExp').addClass('dn');
     if (gachaItemGet === "異国の茶葉") {
         $('.gacha_option_btn').css('display', 'inline-block');
     }
