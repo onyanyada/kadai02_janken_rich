@@ -6,12 +6,15 @@ let gachaScore = 0; //変数用意
 
 // ルーレットをクリックしたとき
 $(".gu_btn6").on("click", function () {
-    $(".gachaUseBtn").css('display', 'block');
+
 
     const r = Math.ceil(Math.random() * 4);
 
     $(".gu_btn6").addClass('cantclick');//再clickできなくする
     localStorage.setItem('clickedGacha', 'true'); // フラグを設定
+
+    localStorage.setItem("gachaUseBtn", 'true');//gachaUseBtnフラグを保存
+    localStorage.setItem("gachaUseExp", 'true');//gachaUseExpフラグを保存
 
     //2.if分岐処理
 

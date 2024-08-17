@@ -74,18 +74,4 @@ $('#nextScBtn').click(function () {
 
 
 
-// ガチャをストーリーに反映
-// ガチャで取得したアイテム名反映
-const gachaItemGet = localStorage.getItem("gachaItem");
-// ガチャで取得したアイテム画像反映
-const gachaImgGet = localStorage.getItem("gachaImg");
-// ガチャで取得したアイテムのスコア反映
-const gachaScoreGet = localStorage.getItem("gachaScore");
-// スコアを数字にする
-const gachaNumber = parseInt(gachaScoreGet);
-//ガチャで取得したアイテム説明を反映
-const gachaExpGet = localStorage.getItem("gachaExp");
 
-$('.gachaItem').text(gachaItemGet);
-$('.gachaImg').html(gachaImgGet);
-$('.gachaExp').html(gachaExpGet);
