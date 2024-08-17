@@ -70,3 +70,41 @@ body {
 .stopped {
     animation: none;
 }
+
+.btnlink {
+    position: relative;
+    background-color: #0066aa;
+    /* 背景色 */
+    color: white;
+    /* 文字色 */
+    padding: 10px 15px;
+    /* パディング */
+    text-align: center;
+    /* 文字のアライメント */
+    text-decoration: none;
+    /* 文字装飾 */
+    display: inline-block;
+    /* ボタンの表示方法 */
+    font-size: 16px;
+    /* フォントサイズ */
+    font-family: Arial, sans-serif;
+    /* フォント */
+    margin: 4px 2px;
+    /* 外側の余白 */
+    cursor: pointer;
+    /* カーソル */
+    border: none;
+    /* ボーダーなし */
+    border-radius: 5px;
+    /* ボタンの角丸 */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    /* 影 */
+    transition: transform 0.1s ease-in-out;
+    /* トランジション */
+}
+
+
+.btnlink:hover {
+    background-color: #fff;
+    color: #0066aa;
+}
