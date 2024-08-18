@@ -81,7 +81,8 @@ main {
     display: block;
 }
 
-button {
+button,
+.btnlink {
     position: relative;
     background-color: #0066aa;
     /* 背景色 */
