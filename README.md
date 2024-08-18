@@ -34,4 +34,4 @@ https://onyanyada.github.io/kadai02_janken_rich/
 ## ⑦質問・疑問・感想、シェアしたいこと等なんでも
 
 - メンターの方々から問題を切り分けたり、一つずつ値をConsoleに出してどこまでできているか確認することの大切さを教わり、そのおかげで解決力があがったと思います。
-- javascriptの共通化：メンターいまよしさんが長文で改正したコードと解説をしてくれました（ https://github.com/onyanyada/kadai02_janken_rich/issues/1 ）。こちら、何度も読み返し、今後も参考にさせていただきます！
+- javascriptの共通化：メンターいまよしさんが長文で改正したコードと解説をしてくれました（ https://github.com/onyanyada/kadai02_janken_rich/issues/1 ）。こちらを99%コピペさせていただきました。何度も読み返し、今後も参考にさせていただきます！
